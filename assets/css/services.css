@@ -1,0 +1,505 @@
+body.services-page {
+    background: linear-gradient(180deg, #fff, #8049FF);
+}
+
+body.services-page .header {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+        linear-gradient(0deg, rgba(10, 93, 121, 0.5), rgba(10, 93, 121, 0.5));
+}
+
+body.services-page .logo img {
+    width: auto;
+    height: 55px;
+}
+
+body.services-page .nav-container {
+    padding: 16px 0px;
+}
+
+body.services-page .btn-lets-connect {
+    background: #2A229047;
+    color: rgba(255, 255, 255, 0.48)
+}
+
+body.services-page .header.scrolled {
+    background: rgba(10, 93, 121, 1);
+}
+
+
+.services-section {
+    background: url('../images/services-bg.png') center/cover no-repeat;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.services-section .overlay {
+    backdrop-filter: blur(4px);
+    padding: 130px 20px;
+    border-radius: 20px;
+}
+
+.services-section .small-text {
+    color: #02033B;
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 60px;
+
+}
+
+.services-section h1 {
+    font-family: "Literata", serif;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 1.15;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #02033B;
+    margin-bottom: 60px;
+
+}
+
+.services-section h1 span {
+    color: #0A5D79;
+}
+
+.services-section .description {
+    font-family: "Literata", serif;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    font-family: "Literata", serif;
+    color: #000000;
+    margin-bottom: 60px;
+    margin: 0 auto 60px auto;
+    max-width: 900px;
+}
+
+.services-section .buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.services-section .btn {
+    background: #0F4C5C33;
+    ;
+    color: #0A5D7980;
+    ;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+
+    transition: background 0.3s ease;
+}
+
+.services-section .btn:hover {
+    background-color: #005f8d;
+}
+
+.services-section .btn.secondary {
+    background-color: transparent;
+    border: 2px solid #0077b6;
+    color: #0077b6;
+}
+
+.services-section .btn.secondary:hover {
+    background-color: #0077b6;
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .services-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .services-section .description {
+        font-size: 1rem;
+    }
+
+    .services-section .overlay {
+        padding: 40px 15px;
+    }
+}
+
+
+
+
+
+.what-we-do {
+    padding: 120px 20px;
+    background: url(../images/services-main-bg.png) no-repeat;
+    background-size:cover;
+    background-position: left top;
+    transition: background 0.3s ease;
+}
+.what-we-do .section-label {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #0A5D79;
+    margin-bottom: 60px;
+}
+
+.what-we-do h1 {
+    font-family: "Literata", serif;
+
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 1.25;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #02033B;
+    margin-bottom: 80px;
+
+}
+
+.what-we-do h4 {
+    font-family: "Literata", serif;
+
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 37px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 32px;
+    color: #0A5D79;
+
+}
+
+.what-we-do p {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 32px;
+
+}
+
+.what-we-do h5 {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #02033B;
+
+}
+
+.what-we-do .note-info {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    display: block;
+    margin-top: 20px;
+
+
+}
+
+.what-we-do .btn-learn-more {
+    background: #0F4C5C33;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, .48);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20.8px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 32px;
+
+
+}
+
+.what-we-do .subtitle {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: #000000;
+    margin: 0 auto 60px auto;
+    margin-bottom: 32px;
+    max-width: 800px;
+
+}
+
+.what-we-do .accordion-button {
+    background-color: transparent;
+    color: #0a0a23;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    box-shadow: none;
+}
+
+.what-we-do .accordion-button:not(.collapsed) {
+
+    color: #0F4C5C;
+    background-color: transparent;
+}
+
+.what-we-do .accordion-button {
+    font-family: "Literata", serif;
+
+    font-weight: 700;
+    font-size: 37px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #0F4C5C;
+}
+
+.what-we-do .accordion-button:after {
+    display: none;
+}
+
+.what-we-do .accordion-body {
+    padding: 0px 32px;
+    border-left: 2.5px solid #0A5D79;
+    margin-top: 32px;
+    margin-bottom: 60px;
+}
+
+.what-we-do .count {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 40px;
+
+}
+
+.what-we-do ul {
+    margin-bottom: 32px;
+}
+
+.what-we-do ul li {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #000;
+
+
+}
+
+.what-we-do .accordion-item {
+    border: none;
+    border-bottom: none;
+    background: transparent;
+}
+
+.image-grid-section img {
+    width: 100%;
+}
+
+
+.what-we-do .image-grid-section {
+    width: 90%;
+    margin-top: 70px;
+}
+
+/* All images */
+.what-we-do .image-grid-section img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Top image */
+.what-we-do .grid-top {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Bottom 7/5 layout */
+.what-we-do .grid-bottom {
+    display: grid;
+    grid-template-columns: 9fr 5fr;
+    gap: 15px;
+}
+
+/* Left side */
+.what-we-do .grid-left {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 15px;
+}
+
+/* Rec 3 & 4 */
+.what-we-do .rec-3-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Right side */
+.what-we-do .grid-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+
+/* =========================
+   Tablet
+========================= */
+@media (max-width: 991px) {
+
+    .what-we-do .grid-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .what-we-do .grid-right {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+}
+
+
+/* =========================
+   Mobile
+========================= */
+@media (max-width: 575px) {
+
+     .what-we-do .grid-top {
+        margin-bottom: 15px;
+    }
+
+    .what-we-do .grid-bottom {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .what-we-do .grid-left {
+        gap: 15px;
+    }
+
+    .what-we-do .rec-3-4 {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .what-we-do .grid-right {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+}
+    .what-we-do .bottom-title {
+    font-family: "IBM Plex Sans", sans-serif;
+font-weight: 600;
+font-size: 100px;
+line-height:1;
+letter-spacing: -2px;
+text-align: center;
+vertical-align: middle;
+margin-bottom: 32px;
+
+    }
+
+.content-slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.content-slider .slider-track {
+    display: flex;
+    transition: transform 0.7s ease-in-out;
+}
+
+.content-slider .tech-slide {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 50px;
+    height: 100%;
+}
+
+.content-slider .tech-logo-item {
+    /* height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+    width:210px;
+}
+
+.content-slider .tech-logo-item img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+@media (max-width: 991px) {
+
+    .content-slider .tech-slide {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    .content-slider .tech-slide {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .content-slider .tech-logo-item {
+        height: 60px;
+    }
+
+    .content-slider .tech-logo-item img {
+        max-height: 35px;
+    }
+}
