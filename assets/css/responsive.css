@@ -1,0 +1,204 @@
+@media (max-width: 600px) {
+
+    .case-studies-grid .highlight-1 {
+        position: absolute;
+        left: 0!important;
+        top: 10%;!important;
+        width: 100% !important;
+        max-width: 100%!important;
+    }
+
+    .case-studies-grid .highlight-2 {
+        position: absolute;
+        right: 0!important;
+        bottom: -100px!important;
+        width: 100%!important;
+        max-width: 100%!important;
+    }
+    .main-container {
+      display: block !important;
+    }
+    .slider-wrapper {
+
+      padding: 32px 0 !important;
+    }
+.case-studies-grid {
+  display: block !important;
+}
+.testimonial-section .slider-container {
+  height: auto !important;
+}
+.hero-top-tags {
+    margin-bottom: 50px !important;
+    padding-top: 30px !important;
+}
+.hero-title {
+    margin-bottom: 32px !important;
+    font-size: 32px !important;
+    margin-top: 32px !important;
+}
+.testimonial-section h2 {
+    font-size: 64px !important;
+    margin-bottom: 100px !important;
+    line-height: 70px !important;
+}
+  .testimonial-section .arrow-wrapper {
+    bottom: 10px !important;
+  }
+  .stats-section {
+    padding-top: 30px !important;
+  }
+  .stats-section h2 {
+    font-size: 24px !important;
+  }.stat-card h3 {
+    font-size: 36px !important;
+  }
+  .stat-card h3 span {
+    font-size: 28px !important;
+  }
+  .faq-section .tab {
+    padding: 16px 0 !important;
+    font-size: 20px !important;
+    line-height: 24px !important;
+}
+.articles-section .section-title {
+  font-size: 30px !important;
+}
+.faq-section {
+  padding-bottom: 0 !important;
+}
+.newsletter-section .form-wrapper > * {
+    flex: 0 0 calc(100% - 25px) !important;
+    max-width: calc(100% - 25px) !important;
+}
+.map-bg {
+    height: 150px !important;
+}
+.contact-panel {
+  gap: 0 !important;
+}
+.current-opening .opening-wrappe {
+    padding-top: 0px !important;
+}
+.current-opening .opening-header {
+  margin-bottom: 0;
+}
+.skills-section {
+  padding-top: 0;
+}
+.skills-section .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)) !important;
+}
+.skills-section h2 {
+  font-size: 28px !important;
+}
+.verified-section .powered {
+    margin-top: 20px !important;
+    margin-bottom: 30px !important;
+}
+.verified-section .verified-header h1 {
+  line-height: 40px !important;
+}
+.talen-flow-large-img {
+  position: static !important;
+  max-width: 100% !important;
+}
+.talent-flow .badges h2 {
+  font-size: 40px !important;
+  margin-bottom: 0 !important;
+}
+.talent-flow .talent-header h1 {
+  line-height: 40px !important;
+}
+.talent-flow .tagline {
+  margin-bottom: 40px !important;
+}
+.talent-flow .description {
+    font-size: 18px !important;
+    line-height: 1.5 !important;
+    margin-bottom: 10px !important;
+}
+.what-we-do h1 {
+  font-size: 24px !important;
+}
+.what-we-do {
+    padding: 30px 0px 30px 0 !important;
+    background: #bfd8df url(../images/services-main-bg.png) no-repeat !important;
+    background-size: 100% !important;
+}
+.what-we-do .accordion-button {
+  font-size: 28px !important;
+}
+.what-we-do h4 {
+  font-size: 26px !important;
+}
+.what-we-do .bottom-title {
+  font-size: 50px !important;
+}
+.engagement-section {
+    padding: 12px 12px !important;
+}
+.engagement-section .card h2 {
+    font-size: 28px !important;
+    margin-bottom: 20px !important;
+    min-height: auto !important;
+}
+.what-we-do .accordion-body {
+  padding: 0px 16px !important;
+}
+.process-heading {
+    max-width: 100% !important;
+}
+.people-services-section h2 {
+    font-size: 28px !important;
+}
+.people-services-section {
+    margin-bottom: 0px !important;
+}
+.about-page .testimonial-card {
+  padding: 20px !important;
+}
+    .about-page  .testimonial-section h2 {
+        font-size: 16px !important;
+        margin-bottom: 20px !important;
+        line-height: 25px !important;
+    }
+    .company-name img {
+      width: 50% !important;
+      margin: 0 auto;
+    }
+    .join-section .event-info h2{
+      font-size: 26px !important;
+  }
+  .join-section {
+    padding: 0 20px !important;
+  }
+  .about-section {
+    padding: 40px 40px;
+}
+.footer .footer-top .logo img {
+        width: 100%;
+        height: auto !important;
+}
+.form-container h2 {
+  font-size: 28px !important;
+  margin-bottom: 30px !important;
+}
+.form-section label {
+  font-size: 16px !important;
+}
+.contact-section .contact-box {
+      flex: 1 1 auto !important;
+}
+.contact-section .contact-box h3 {
+  font-size: 24px !important;
+}
+.hero-career .description {
+  font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+.teams-career p {
+    font-size: 18px !important;
+  line-height: 1.25 !important;
+}
+}

@@ -1,24 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileToggle = document.getElementById('mobileToggle');
-    const navMenu = document.getElementById('navMenu');
 
-    if (mobileToggle && navMenu) {
-        // Toggle mobile menu visibility
-        mobileToggle.addEventListener('click', () => {
-            mobileToggle.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-
-        // Close mobile menu when any link inside it is clicked
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileToggle.classList.remove('active');
-                navMenu.classList.remove('active');
-            });
-        });
-    }
-});
 
 
 
@@ -422,13 +402,33 @@ const observer = new IntersectionObserver(
 observer.observe(statsSection);
 
 
-const fileUpload = document.getElementById('fileUpload');
-const fileName = document.querySelector('.file-name');
-const placeholder = document.querySelector('.file-placeholder');
+// const fileUpload = document.getElementById('fileUpload');
+// const fileName = document.querySelector('.file-name');
+// const placeholder = document.querySelector('.file-placeholder');
 
-fileUpload.addEventListener('change', function () {
-  if (this.files && this.files[0]) {
-    placeholder.style.display = 'none';
-    fileName.textContent = this.files[0].name;
-  }
-});
+// fileUpload.addEventListener('change', function () {
+//   if (this.files && this.files[0]) {
+//     placeholder.style.display = 'none';
+//     fileName.textContent = this.files[0].name;
+//   }
+// });
+
+const letsConnectBtn = document.getElementById('letsConnectBtn');
+const contactForm = document.getElementById('contactForm');
+const closeForm = document.getElementById('closeForm');
+const overlay = document.getElementById('overlay');
+
+function openForm() {
+  contactForm.classList.add('active');
+  overlay.classList.add('active');
+}
+
+function closeFormPanel() {
+  contactForm.classList.remove('active');
+  overlay.classList.remove('active');
+}
+
+letsConnectBtn.addEventListener('click', openForm);
+closeForm.addEventListener('click', closeFormPanel);
+overlay.addEventListener('click', closeFormPanel);
+

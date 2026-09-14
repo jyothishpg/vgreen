@@ -28,7 +28,7 @@
   <header class="header">
     <div class="nav-container">
       <!-- Logo Section -->
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <div class="logo-mark">
           <img src="assets/images/logo.png" alt="logo">
         </div>
@@ -37,11 +37,25 @@
       <!-- Navigation Links -->
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
-          <li><a href="#">For Talent</a></li>
-          <li><a href="#">For Companies</a></li>
+          <li><a href="#">For Talent</a>
+            <ul>
+              <li><a href="for-talents.html">Current Openings</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">For Companies</a>
+          <ul>
+              <li><a href="for-companies.html">Talent Flow</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
           <li><a href="#">Insights</a></li>
-          <li><a href="#">Who We Are?</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="aboutus.html">Who We Are?</a></li>
+          <li><a href="carrer.html">Careers</a></li>
         </ul>
       </nav>
 
@@ -384,14 +398,14 @@
         <p class="subtext">Stay connected</p>
         <form class="signup-form">
           <div class="form-group">
-            <label for="name">First name</label>
             <input type="text" id="name" name="name" required />
+            <label for="name">First name</label>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
             <div class="email-field">
               <input type="email" id="email" name="email" required />
+            <label for="email">Email</label>
               <button type="submit" class="arrow-btn">→</button>
             </div>
           </div>
@@ -492,6 +506,7 @@
   <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="assets/js/script.js"></script>
+    <script src="assets/js/menu-toggle.js"></script>
   <script src="assets/js/carrer.js"></script>
 
 </body>

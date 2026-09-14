@@ -28,7 +28,7 @@
   <header class="header">
     <div class="nav-container">
       <!-- Logo Section -->
-      <a href="#" class="logo">
+      <a href="index.html" class="logo">
         <div class="logo-mark">
           <img src="assets/images/logo.png" alt="logo">
         </div>
@@ -37,17 +37,31 @@
       <!-- Navigation Links -->
       <nav class="nav-menu" id="navMenu">
         <ul class="nav-links">
-          <li><a href="#">For Talent</a></li>
-          <li><a href="#">For Companies</a></li>
+          <li><a href="#">For Talent</a>
+            <ul>
+              <li><a href="for-talents.html">Current Openings</a></li>
+              <li><a href="#">FAQs</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
+          <li><a href="#">For Companies</a>
+          <ul>
+              <li><a href="for-companies.html">Talent Flow</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="#">Case Studies</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </li>
           <li><a href="#">Insights</a></li>
-          <li><a href="#">Who We Are?</a></li>
-          <li><a href="#">Careers</a></li>
+          <li><a href="aboutus.html">Who We Are?</a></li>
+          <li><a href="carrer.html">Careers</a></li>
         </ul>
       </nav>
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <a href="#" class="btn-lets-connect">Lets Connect</a>
+        <a href="#" class="btn-lets-connect" id="letsConnectBtn">Lets Connect</a>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -63,7 +77,7 @@
 
       <!-- Slide 1 -->
       <div class="hero-slide slide-1 active"
-        style="background-image: url('assets/images/banner-1.png'); background-blend-mode: overlay; background-size: cover; background-position: center;">
+        style="background-color: #16153B; background-image: url('assets/images/banner-1.png');">
         <div class="hero-content">
           <div class="hero-top-tags">
             <span class="f-lg">INNOVATE</span>
@@ -72,6 +86,8 @@
             <span class="dot-sep">•</span>
             <span>THRIVE</span>
           </div>
+
+          
           <div class="hero-subtitle">AI-POWERED TALENT INTELLIGENCE</div>
           <h1 class="hero-title">Human Insights <br>Meets <span>AI Precision</span></h1>
           <p class="hero-description">We don’t just fill roles - we engineer talent ecosystems. VGreenTEK blends deep
@@ -82,7 +98,7 @@
       </div>
 
       <!-- Slide 2 -->
-      <div class="hero-slide slide-2" style="background-image: url('assets/images/banner-2.png')">
+      <div class="hero-slide slide-2" style="background-color: #1a253f; background-image: url('assets/images/banner-2.png')">
         <div class="hero-content">
           <div class="hero-top-tags">
             <span class="f-lg">INNOVATE</span>
@@ -100,7 +116,7 @@
       </div>
 
       <!-- Slide 3 -->
-      <div class="hero-slide slide-3" style="background-image: url('assets/images/banner-3.png')">
+      <div class="hero-slide slide-3" style="background-color: #291c49;background-image: url('assets/images/banner-3.png')">
         <div class="hero-content">
           <div class="hero-top-tags">
             <span class="f-lg">INNOVATE</span>
@@ -118,7 +134,7 @@
         </div>
       </div>
 
-      <div class="hero-slide slide-4" style="background-image: url('assets/images/banner-4.png')">
+      <div class="hero-slide slide-4" style="background-color: #404040;background-image: url('assets/images/banner-4.png')">
         <div class="hero-content">
           <div class="hero-top-tags">
             <span class="f-lg">INNOVATE</span>
@@ -136,7 +152,7 @@
         </div>
       </div>
 
-      <div class="hero-slide slide-5" style="background-image: url('assets/images/banner-5.png')">
+      <div class="hero-slide slide-5" style="background-color: #2e4930;background-image: url('assets/images/banner-5.png')">
         <div class="hero-content">
           <div class="hero-top-tags">
             <span class="f-lg">INNOVATE</span>
@@ -975,14 +991,14 @@
         <p class="subtext">Stay connected</p>
         <form class="signup-form">
           <div class="form-group">
-            <label for="name">First name</label>
             <input type="text" id="name" name="name" required />
+            <label for="name">First name</label>
           </div>
 
           <div class="form-group">
-            <label for="email">Email</label>
             <div class="email-field">
               <input type="email" id="email" name="email" required />
+              <label for="email">Email</label>
               <button type="submit" class="arrow-btn">→</button>
             </div>
           </div>
@@ -1060,8 +1076,8 @@
 
         <div class="link-group">
           <h5>Company</h5>
-          <a href="#">About Us</a>
-          <a href="#">Services</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="services.html">Services</a>
           <a href="#">Contact Us</a>
         </div>
       </div>
@@ -1080,9 +1096,55 @@
   </footer>
 
 
+
+
+<div id="contactForm" class="contact-form">
+    <span id="closeForm" class="close-btn">&times;</span>
+  <div class="form-header">
+    <h2>Send us a message</h2>
+    <p>We typically respond within 24 hours. Tell us about your needs and we'll get back to you with next steps.</p>
+  </div>
+
+  <form>
+    <label>FULL NAME*</label>
+    <input type="text" required>
+
+    <label>EMAIL ADDRESS*</label>
+    <input type="email" required>
+
+    <label>PHONE NUMBER</label>
+    <input type="tel">
+
+    <label>COMPANY NAME*</label>
+    <input type="text" required>
+
+    <label>Which service interests you? *</label>
+    <input type="text" required>
+
+    <label>Tell us about your challenge *</label>
+    <textarea required></textarea>
+
+    <button type="submit" class="send-btn">SEND MESSAGE</button>
+  </form>
+
+  <div class="social-icons">
+    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+    <a href="#"><i class="fa-solid fa-envelope"></i></a>
+  </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
+
   <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="assets/js/script.js"></script>
+    <script src="assets/js/menu-toggle.js"></script>
+    <script src="assets/js/animation.js"></script>
+  <script>
+    
+  </script>
 
 </body>
 

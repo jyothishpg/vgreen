@@ -1,0 +1,191 @@
+body.designing-page {
+    background: linear-gradient(180deg, #3564C5 0%, #0A7970 100%);
+
+}
+
+body.designing-page .header {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(0, 49, 109, 0.5), rgba(0, 49, 109, 0.5));
+
+
+}
+body.designing-page .header.scrolled {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(0, 49, 109, 0.7), rgba(0, 49, 109, 0.7));
+}
+body.designing-page .logo img {
+    width: auto;
+    height: 55px;
+}
+
+body.designing-page .nav-container {
+    padding: 16px 0px;
+}
+
+body.designing-page .btn-lets-connect {
+    background: #2A229047;
+    color: rgba(255, 255, 255, 0.48)
+}
+
+
+.designing-page .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.designing-page .banner-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.designing-page .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.designing-page .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 80, 0.1) 30%, rgba(0, 0, 80, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.designing-page .banner-content {
+    max-width: 700px;
+}
+
+.designing-page .banner-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 200px;
+    left: 3%;
+}
+
+.designing-page h1 {
+    font-family: "Literata", serif;
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 70px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 32px;
+    color: #fff;
+
+}
+
+.designing-page .banner-text {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .designing-page .banner-overlay {
+        padding: 40px 20px;
+    }
+
+    .designing-page h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .designing-page .banner-text {
+        font-size: 0.95rem;
+    }
+}
+
+.designing-page  .why-offer-section .why-it-matters h3 {
+    color: #fff;
+}
+.designing-page .why-offer-section .intro,
+.designing-page  .why-offer-section .subtext,
+.designing-page  .why-offer-section .offer-left h3{
+color: #fff;
+}
+.designing-page .why-offer-section .offer-item .label {
+color: #FFC247;
+}
+.designing-page  .why-offer-section .offer-item p,
+.designing-page .why-offer-section .best-for {
+color: #fff;
+}
+
+.designing-page .process-section {
+
+    background-image: url("../images/designing-process.png");
+
+    color: #ffffff;
+}
+.designing-page .process-overlay {
+background-image: url("../images/designing-process.png") ;
+}
+.designing-page .why-section .section-title {
+    color:#fff;
+}
+.designing-page .why-section .grid-item h2 {
+      color:#02033B;
+}
+.designing-page .why-section .grid-item p {
+    color: #fff;
+}
+.designing-page .why-offer-section .offer-right {
+border-left-color: #5FA4E6;
+}
+.designing-page .why-offer-section .offer-item {
+    border-bottom-color: #5FA4E6;
+}
+.designing-page .why-section .grid-item {
+border-top-color: #5FA4E6;
+}
+.designing-page .faq-title {
+    color: #fff;
+}
+.designing-page  .faq-section .accordion-button {
+color: #fff;
+}
+.designing-page .faq-section .accordion-item {
+    border-bottom-color:#fff ;
+}
+@media (min-width: 1400px) {
+    .designing-page  .faq-section .accordion-wrapper {
+        max-width: 900px;
+        border-top: 1px solid #fff;
+    }
+}
+.designing-page .faq-section .accordion-button::after {
+    color: #5FA4E6;
+}
+.designing-page  .team-section .small-text {
+    color: #fff;
+}
+
+.designing-page .designing-page h1 {
+    color: #02033B;
+}
+.designing-page .team-section {
+    border-top-color: #5FA4E6;
+}
+.designing-page h1 {
+    color: #fff;
+}

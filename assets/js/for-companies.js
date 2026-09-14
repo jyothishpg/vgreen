@@ -1,0 +1,37 @@
+const header = document.querySelector('body.for-companies .header');
+
+window.addEventListener('scroll', function () {
+  const headerHeight = header.offsetHeight;
+
+  if (window.scrollY > headerHeight) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
+function animateValue(id, start, end, duration) {
+  const element = document.getElementById(id);
+  let startTime = null;
+
+  // fade in the whole <h2> when animation starts
+  element.parentElement.style.opacity = 1;
+
+  function step(timestamp) {
+    if (!startTime) startTime = timestamp;
+    const progress = Math.min((timestamp - startTime) / duration, 1);
+    const value = Math.floor(progress * (end - start) + start);
+    element.textContent = value;
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  }
+
+  window.requestAnimationFrame(step);
+}
+
+window.addEventListener('load', () => {
+  animateValue('profiles', 0, 1.2, 1500);   // suffix "M+" is static span
+  animateValue('onboarding', 0, 48, 1500);  // suffix "h"
+  animateValue('verticals', 0, 18, 1500);   // suffix "+"
+  animateValue('accuracy', 0, 94, 1500);    // suffix "%"
+});

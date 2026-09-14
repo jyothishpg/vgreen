@@ -1,0 +1,278 @@
+body.about-page-details {
+background: linear-gradient(180deg, #3564C5 0%, #29218F 100%);
+
+}
+
+body.about-page-details .header {
+background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 0.34), rgba(2, 3, 59, 0.34));
+
+
+
+
+
+}
+body.about-page-details .header.scrolled {
+   background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 0.7), rgba(2, 3, 59, 0.7));
+
+
+
+}
+body.about-page-details .logo img {
+    width: auto;
+    height: 55px;
+}
+
+body.about-page-details .nav-container {
+    padding: 16px 0px;
+}
+
+body.about-page-details .btn-lets-connect {
+    background: #2A229047;
+    color: rgba(255, 255, 255, 0.48)
+}
+
+.trust-section {
+  background-color: #ffffff;
+  font-family: 'Poppins', sans-serif;
+  color: #0d0d0d;
+  padding: 80px 0px;
+  padding-bottom: 0;
+  padding-top: 0px;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+}
+
+/* Header */
+.trust-section .trust-header {
+  background: linear-gradient(180deg, #003b46 0%, #005b5c 100%);
+  color: #fff;
+  padding: 170px 40px;
+  padding-bottom: 80px;
+  border-radius: 0;
+  margin-bottom: 40px;
+}
+
+.trust-section .trust-header h1 {
+    font-family: "Literata", serif;
+font-weight: 700;
+font-size: 67px;
+line-height: 70px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #ffff;
+margin-bottom: 32px;
+
+}
+
+.trust-header .highlight {
+  color: #01FF6B;
+}
+.trust-section .trust-header h5 {
+  color: #01FF6B;    
+  font-family: "IBM Plex Sans", sans-serif;
+
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+margin-bottom: 80px;
+
+}
+
+
+.trust-section .trust-header p {
+  font-family: "IBM Plex Sans", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:rgb(255, 255, 255, .65);
+
+}
+
+/* Author Box */
+.trust-section .author-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.trust-section .author-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.trust-section .author-text h3 {
+  font-size: 22px;
+  line-height: 1.25;
+  font-weight: 600;
+  margin-bottom: 12px;    
+  font-family: "IBM Plex Sans", sans-serif;
+
+}
+
+.trust-section .author-text p {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #02033B;
+  font-family: "IBM Plex Sans", sans-serif;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+/* Content */
+.trust-section .trust-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  padding: 45px 0;
+}
+.trust-section .trust-item {
+  border-bottom: 1px solid #0A5D79;
+  padding: 32px 0;
+}
+.trust-section .trust-item h4 {
+  font-size:50px;
+  font-weight: 500;
+  color: #0A5D79;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.trust-section .trust-item p {
+  font-size: 22px;
+  line-height: 1.25;
+  color: #02033B;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+.trust-section .trust-item p strong {
+  margin-bottom: 20px;
+  font-weight: bold;
+  display: block;
+}
+
+.trust-section .image-placeholder {
+  background-color: #e0e0e0;
+  color: #005b5c;
+  font-weight: 600;
+  text-align: center;
+  padding: 40px 0;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* Footer */
+.trust-section .trust-footer {
+ background: linear-gradient(180deg, #082A32 0%, #0C4B59 100%);
+    font-family: "Literata", serif;
+
+font-weight: 700;
+font-size: 37px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+border-radius: 60px 60px 0 0;
+padding: 60px 60px 200px 60px;
+  color: #fff;
+  margin-top: 60px;
+}
+
+.trust-section .trust-footer p {
+  max-width: 80%;
+  margin: 0 auto;
+    font-family: "Literata", serif;
+
+font-weight: 700;
+font-size: 37px;
+line-height: 1.5;
+letter-spacing: 0%;
+vertical-align: middle;
+margin-bottom: 20px;
+}
+.trust-section .trust-footer span {
+  color: #01FF6B;
+      font-family: "IBM Plex Sans", sans-serif;
+font-weight: 600;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: right;
+vertical-align: middle;
+display: block;
+text-align: end;
+
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .trust-section .trust-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .trust-section .trust-section {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .trust-section .author-box {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .trust-section .trust-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .trust-section .trust-item h4 {
+    font-size: 1rem;
+  }
+
+  .trust-section .trust-item p {
+    font-size: 0.9rem;
+  }
+}
+.founders-voice {
+  border-bottom: 1px solid #0A5D79;
+  padding: 32px 0;
+}
+.founders-voice  h6 {
+    font-family: "IBM Plex Sans", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgb(2, 3, 59, .65);
+margin-bottom: 12px;
+
+}
+.founders-voice h2 {
+    font-family: "Literata", serif;
+font-weight: 700;
+font-size: 37px;
+line-height: 1.5;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #02033B;
+margin-bottom: 32px;
+
+}
+.founders-voice p {
+      font-family: "IBM Plex Sans", sans-serif;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: rgb(2, 3, 59, .65);
+margin-bottom: 32px;
+}

@@ -1,0 +1,542 @@
+body.people-page {
+background: linear-gradient(180deg, #3564C5 0%, #29218F 100%);
+
+}
+
+body.people-page .header {
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 0.34), rgba(2, 3, 59, 0.34));
+
+
+
+
+}
+body.people-page .header.scrolled {
+   background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 0.7), rgba(2, 3, 59, 0.7));
+
+
+}
+body.people-page .logo img {
+    width: auto;
+    height: 55px;
+}
+
+body.people-page .nav-container {
+    padding: 16px 0px;
+}
+
+body.people-page .btn-lets-connect {
+    background: #2A229047;
+    color: rgba(255, 255, 255, 0.48)
+}
+
+
+.people-page .banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.people-page .banner-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.people-page .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.people-page .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 80, 0.1) 30%, rgba(0, 0, 80, 0.7) 100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 60px 40px;
+    box-sizing: border-box;
+}
+
+.people-page .banner-content {
+    max-width: 700px;
+}
+
+.people-page .banner-tag {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.25);
+    color: #000000;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 200px;
+    left: 3%;
+}
+
+.people-page h1 {
+    font-family: "Literata", serif;
+    font-weight: 700;
+    font-size: 67px;
+    line-height: 70px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    margin-bottom: 32px;
+    color: #fff;
+
+}
+
+.people-page .banner-text {
+    font-family: "IBM Plex Sans", sans-serif;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .people-page .banner-overlay {
+        padding: 40px 20px;
+    }
+
+    .people-page h1 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+
+    .people-page .banner-text {
+        font-size: 0.95rem;
+    }
+}
+
+.people-page  .why-offer-section .why-it-matters h3 {
+    color: #fff;
+}
+.people-page .why-offer-section .intro,
+.people-page  .why-offer-section .subtext,
+.people-page  .why-offer-section .offer-left h3{
+color: #fff;
+}
+.people-page .why-offer-section .offer-item .label {
+color: #FFC247;
+}
+.people-page .why-offer-section .offer-item h2 {
+color: #fff;
+}
+.people-page  .why-offer-section .offer-item p,
+.people-page .why-offer-section .best-for {
+color: #fff;
+}
+
+.people-page .process-section {
+
+    background-image: url("../images/people-process.png");
+
+    color: #ffffff;
+}
+.people-page .process-overlay {
+background-image: url("../images/people-process.png") ;
+}
+.people-page .why-section .section-title {
+    color:#fff;
+}
+.people-page .why-section .grid-item h2 {
+      color:#36B1B9;
+}
+.people-page .why-section .grid-item p {
+    color: #fff;
+}
+.people-page .why-offer-section .offer-right {
+border-left-color: #5FA4E6;
+}
+.people-page .why-offer-section .offer-item {
+    border-bottom-color: #5FA4E6;
+}
+.people-page .why-offer-section .offer-item ul {
+   margin-top: 32px;
+}
+.people-page .why-section .grid-item {
+border-top-color: #5FA4E6;
+}
+.people-page .faq-title {
+    color: #fff;
+}
+.people-page  .faq-section .accordion-button {
+color: #fff;
+}
+.people-page .faq-section .accordion-item {
+    border-bottom-color:#fff ;
+}
+@media (min-width: 1400px) {
+    .people-page  .faq-section .accordion-wrapper {
+        max-width: 900px;
+        border-top: 1px solid #fff;
+    }
+}
+.people-page .faq-section .accordion-button::after {
+    color: #5FA4E6;
+}
+.people-page  .team-section .small-text {
+    color: #fff;
+}
+
+.people-page .people-page h1 {
+    color: #02033B;
+}
+.people-page .team-section {
+    border-top-color: #5FA4E6;
+}
+.people-page h1 {
+    color: #fff;
+}
+.people-page  .divider {
+    border-top-color: #5FA4E6;
+}
+
+.people-page .team-section h1 {
+    color: #36B1B9;
+}
+.people-page .team-section .btn {
+    background-color: #36B1B9;
+    color: #02033B;
+    transition: background 0.3s ease;
+}
+.offer-subtitle {    
+    font-family: "IBM Plex Sans", sans-serif;
+
+font-weight: 400;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0%;
+vertical-align: middle;
+color:#fff;
+margin-top: 32px;
+display: block;
+}
+.what-we-offer-seperator {
+    border-top: 3px solid #5FA4E6;
+    margin: 60px 0;
+}
+
+.people-page .objectives-section {
+  padding: 80px 20px;
+}
+
+
+
+.people-page .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.people-page .item {
+  position: relative;
+  padding-top: 20px;
+  border-top: 1px solid #F8FAFF;
+}
+
+.people-page .icon {
+  color: #ffcc00; /* Yellow star */
+  font-size: 1.2rem;
+  /* position: absolute; */
+  /* top: -10px;
+  left: 0; */
+  margin-bottom: 32px;
+  display: block;
+}
+
+.people-page .item p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;    
+font-family: "IBM Plex Sans", sans-serif;
+color:#fff;
+
+
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .people-page .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .people-page .item p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .people-page .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .people-page .item {
+    padding-top: 15px;
+  }
+}
+.people-services-section {
+    margin-bottom: 80px;
+}
+.people-services-section h5  {    
+    font-family: "IBM Plex Sans", sans-serif;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #fff;
+margin-bottom: 12px;
+
+}
+.people-services-section h2 {
+        font-family: "Literata", serif;
+
+font-weight: 600;
+font-size: 51px;
+line-height: 1.25;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #fff;
+margin-bottom: 32px;
+}
+.people-services-section p {    
+    font-family: "IBM Plex Sans", sans-serif;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+}
+
+  .people-page .small-label {
+    color: #FF0000;
+}
+  .people-page .process-heading h2 {
+    color: #02033B;
+}
+  .people-page .process-item {
+    padding-top: 18px;
+    border-top: 1px solid #02033B;
+}
+  .people-page .number {
+    color: #FF0000;
+}
+ .people-page .process-item h3 {
+    color: #02033B;
+}
+ .people-page .process-item p {
+    color: #02033B;
+}
+ .people-page .process-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+/* Large tablets */
+@media (max-width: 1199px) {
+    .people-page .process-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Tablets */
+@media (max-width: 991px) {
+    .people-page .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile landscape */
+@media (max-width: 767px) {
+    .people-page .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .people-page .process-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.expertise-section {
+  padding: 80px 20px;
+  padding-bottom: 0;
+}
+
+
+.expertise-section .small-text {    font-family: "IBM Plex Sans", sans-serif;
+
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: 0%;
+vertical-align: middle;
+
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.expertise-section h1 {
+    font-family: "Literata", serif;
+
+font-weight: 700;
+font-size: 37px;
+line-height: 1.25;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #36B1B9;
+margin-bottom: 90px;
+}
+
+.expertise-section .grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.expertise-section .column {
+  flex: 1 1 500px;
+  display: flex;
+  flex-direction: column;
+}
+
+.expertise-section .item {
+    font-family: "IBM Plex Sans", sans-serif;
+
+font-weight: 400;
+font-size: 22px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #fff;
+padding: 16px 0;
+padding-left: 24px;
+border-top: 1px solid #5FA4E6
+
+}
+
+.expertise-section .icon {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  color: #00b4d8;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .expertise-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .expertise-section .grid {
+    flex-direction: column;
+  }
+
+  .expertise-section .column {
+    flex: 1 1 100%;
+  }
+}
+.seperator-line {
+    height: 3px;
+    margin: 80px auto;
+    border-top: 3px solid #5FA4E6;
+}
+.badge-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 80px;
+}
+.badge-wrapper .badge {
+         font-family: "IBM Plex Sans", sans-serif;
+
+   border-radius: 42px;
+   padding: 10px 40px;
+   background: url(../images/badge-bg.png) no-repeat;
+   background-size: cover;
+font-weight: 600;
+font-size: 20px;
+line-height: 20.8px;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+color: rgba(255, 255, 255, 0.48);
+min-height: 42px;
+
+}
+
+
+
+.deliver-section {
+  padding: 80px 20px;
+}
+
+
+.deliver-section .small-text {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b8d4ff;
+  margin-bottom: 15px;
+}
+
+.deliver-section h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #00b4d8;
+  margin-bottom: 50px;
+  line-height: 1.4;
+}
+
+.deliver-section .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.deliver-section .item {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 10px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.deliver-section .item:hover {
+  color: #00b4d8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ .deliver-section  h1 {
+    font-size: 1.6rem;
+  }
+
+  .deliver-section .grid {
+    gap: 25px;
+  }
+}
