@@ -140,12 +140,12 @@ color: #fff;
 
 .people-page .process-section {
 
-    background-image: url("../images/people-process.png");
+    background-image: url("../images/people-process.webp");
 
     color: #ffffff;
 }
 .people-page .process-overlay {
-background-image: url("../images/people-process.png") ;
+background-image: url("../images/people-process.webp") ;
 }
 .people-page .why-section .section-title {
     color:#fff;
@@ -476,7 +476,7 @@ border-top: 1px solid #5FA4E6
 
    border-radius: 42px;
    padding: 10px 40px;
-   background: url(../images/badge-bg.png) no-repeat;
+   background: url(../images/badge-bg.webp) no-repeat;
    background-size: cover;
 font-weight: 600;
 font-size: 20px;

@@ -136,12 +136,12 @@ color: #fff;
 
 .software-page .process-section {
 
-    background-image: url("../images/software-process.png");
+    background-image: url("../images/software-process.webp");
 
     color: #ffffff;
 }
 .software-page .process-overlay {
-background-image: url("../images/software-process.png") ;
+background-image: url("../images/software-process.webp") ;
 }
 .software-page .why-section .section-title {
     color:#fff;

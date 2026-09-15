@@ -1,0 +1,38 @@
+.verified-header {
+  overflow: hidden;
+}
+
+.verified-header .powered,
+.verified-header h1,
+.verified-header .subtext {
+  opacity: 0;
+  transform: translateY(70px);
+  animation: bannerSlideUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Small heading first */
+.verified-header .powered {
+  animation-delay: 0.1s;
+}
+
+/* Main heading */
+.verified-header h1 {
+  animation-delay: 0.25s;
+}
+
+/* Description last */
+.verified-header .subtext {
+  animation-delay: 0.45s;
+}
+
+@keyframes bannerSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(70px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

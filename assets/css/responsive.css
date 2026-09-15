@@ -123,7 +123,7 @@
 }
 .what-we-do {
     padding: 30px 0px 30px 0 !important;
-    background: #bfd8df url(../images/services-main-bg.png) no-repeat !important;
+    background: #bfd8df url(../images/services-main-bg.webp) no-repeat !important;
     background-size: 100% !important;
 }
 .what-we-do .accordion-button {
@@ -171,7 +171,7 @@
       font-size: 26px !important;
   }
   .join-section {
-    padding: 0 20px !important;
+    padding: 0 60px !important;
   }
   .about-section {
     padding: 40px 40px;
@@ -201,4 +201,28 @@
     font-size: 18px !important;
   line-height: 1.25 !important;
 }
+.for-talents .header {
+  padding: 0 10px !important;
 }
+.for-companies .header {
+  padding: 0 10px !important;
+}
+.services-page .header {
+  padding: 0 10px !important;
+}
+.about-page .header {
+  padding: 0 10px !important;
+}
+.what-we-do .image-grid-section {
+    width: 100%;
+}
+.recruitment-page .header {
+  padding: 0 10px !important;
+}
+.career-page.header {
+  padding: 0 10px !important;
+}
+
+}
+
+

@@ -281,7 +281,7 @@ body.recruitment-page .header.scrolled {
     padding: 80px 40px 50px;
     overflow: hidden;
 
-    background-image: url("../images/process-bg.jpg");
+    background-image: url("../images/process-bg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -294,7 +294,7 @@ body.recruitment-page .header.scrolled {
     position: absolute;
     inset: 0;
 
-    background: url(../images/process-bg.png) no-repeat;
+    background: url(../images/process-bg.webp) no-repeat;
     background-size: cover;
 }
 

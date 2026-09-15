@@ -1,7 +1,7 @@
 
 
 
-
+// banner
 document.addEventListener('DOMContentLoaded', () => {
     const slides = document.querySelectorAll('.hero-slide');
     const dots = document.querySelectorAll('.slider-dots .dot');
@@ -75,233 +75,267 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize auto play timer
     startTimer();
 });
-const sliderWrapper = document.getElementById('sliderWrapper');
-const logoRows = document.querySelectorAll('.logo-row');
-const indicatorDots = document.getElementById('indicatorDots');
+// banner
 
-let currentRow = 0;
-let autoScrollInterval;
-let isUserInteracting = false;
+document.addEventListener('DOMContentLoaded', () => {
 
-const ACTIVE_ROWS = 3; // 3 rows × 2 columns = 6 active items
-const SCROLL_ROWS = 2; // Move 2 rows at a time
-const AUTO_SCROLL_TIME = 4000;
+    const sliderWrapper =
+        document.getElementById('sliderWrapper');
 
+    const logoTrack =
+        sliderWrapper?.querySelector('.logo-track');
 
-// ------------------------------------
-// UPDATE ACTIVE 6 LOGOS
-// ------------------------------------
-
-function updateHighlight() {
-
-  const wrapperRect = sliderWrapper.getBoundingClientRect();
-
-  const centerY =
-    wrapperRect.top +
-    wrapperRect.height / 2;
-
-  // Find all rows sorted by distance from center
-  const rowsWithDistance = [];
-
-  logoRows.forEach((row, index) => {
-
-    const rect = row.getBoundingClientRect();
-
-    const rowCenter =
-      rect.top +
-      rect.height / 2;
-
-    const distance =
-      Math.abs(centerY - rowCenter);
-
-    rowsWithDistance.push({
-      row,
-      index,
-      distance
-    });
-
-  });
+    const logoRows =
+        logoTrack?.querySelectorAll('.logo-row');
 
 
-  // Sort nearest rows first
-  rowsWithDistance.sort(
-    (a, b) => a.distance - b.distance
-  );
+    if (
+        !sliderWrapper ||
+        !logoTrack ||
+        !logoRows?.length
+    ) {
+        return;
+    }
 
 
-  // Remove active from all
-  document
-    .querySelectorAll('.logo-item')
-    .forEach(item => {
+    /* ==========================================
+       SETTINGS
+    ========================================== */
 
-      item.classList.remove('active');
+    const ACTIVE_ROWS = 3;
 
-    });
+    // Increase for faster scrolling
+    const SCROLL_SPEED = 30;
 
 
-  // Activate nearest 3 rows
-  rowsWithDistance
-    .slice(0, ACTIVE_ROWS)
-    .forEach(data => {
+    let position = 0;
+    let lastTime = performance.now();
 
-      data.row
-        .querySelectorAll('.logo-item')
-        .forEach(item => {
+    let isPaused = false;
 
-          item.classList.add('active');
+    let firstSetHeight = 0;
+
+
+    /* ==========================================
+       GET FIRST SET HEIGHT
+    ========================================== */
+
+    function calculateHeight() {
+
+        const rows =
+            Array.from(logoRows);
+
+        /*
+         * Since we duplicated the rows,
+         * first half = original content
+         */
+
+        const half =
+            Math.floor(rows.length / 2);
+
+
+        firstSetHeight =
+            rows
+                .slice(0, half)
+                .reduce(
+                    (total, row) =>
+                        total + row.offsetHeight,
+                    0
+                );
+
+    }
+
+
+    /* ==========================================
+       ACTIVE LOGOS
+    ========================================== */
+
+    function updateHighlight() {
+
+        const wrapperRect =
+            sliderWrapper.getBoundingClientRect();
+
+        const centerY =
+            wrapperRect.top +
+            wrapperRect.height / 2;
+
+
+        const rows =
+            Array.from(logoRows);
+
+
+        const distances =
+            rows.map(row => {
+
+                const rect =
+                    row.getBoundingClientRect();
+
+                const rowCenter =
+                    rect.top +
+                    rect.height / 2;
+
+                return {
+                    row,
+                    distance:
+                        Math.abs(
+                            centerY -
+                            rowCenter
+                        )
+                };
+
+            });
+
+
+        distances.sort(
+            (a, b) =>
+                a.distance -
+                b.distance
+        );
+
+
+        /* Remove active */
+
+        rows.forEach(row => {
+
+            row
+                .querySelectorAll('.logo-item')
+                .forEach(item => {
+
+                    item.classList.remove(
+                        'active'
+                    );
+
+                });
 
         });
 
-    });
+
+        /* Activate nearest 3 rows */
+
+        distances
+            .slice(0, ACTIVE_ROWS)
+            .forEach(item => {
+
+                item.row
+                    .querySelectorAll(
+                        '.logo-item'
+                    )
+                    .forEach(logo => {
+
+                        logo.classList.add(
+                            'active'
+                        );
+
+                    });
+
+            });
+
+    }
 
 
-  // Find nearest row
-  currentRow =
-    rowsWithDistance[0].index;
+    /* ==========================================
+       AUTO MARQUEE
+    ========================================== */
 
-}
+    function animate(timestamp) {
 
+        const delta =
+            timestamp - lastTime;
 
-// ------------------------------------
-// SCROLL TO ROW
-// ------------------------------------
-
-function goToRow(index) {
-
-  if (index >= logoRows.length) {
-
-    index = 0;
-
-  }
+        lastTime = timestamp;
 
 
-  if (index < 0) {
+        if (!isPaused) {
 
-    index =
-      logoRows.length - 1;
+            /*
+             * Move upward continuously
+             */
 
-  }
-
-
-  const row =
-    logoRows[index];
-
-
-  const targetScroll =
-    row.offsetTop -
-    (sliderWrapper.clientHeight / 2) +
-    (row.offsetHeight / 2);
+            position +=
+                (SCROLL_SPEED * delta) /
+                1000;
 
 
-  sliderWrapper.scrollTo({
+            /*
+             * When first set has completely
+             * moved away, start from same
+             * position in duplicate set.
+             */
 
-    top: targetScroll,
+            if (
+                position >=
+                firstSetHeight
+            ) {
 
-    behavior: 'smooth'
+                position -=
+                    firstSetHeight;
 
-  });
-
-
-  currentRow =
-    index;
-
-}
-
-
-// ------------------------------------
-// AUTO SCROLL
-// ------------------------------------
-
-function startAutoScroll() {
-
-  clearInterval(autoScrollInterval);
+            }
 
 
-  autoScrollInterval =
-    setInterval(() => {
-
-      if (!isUserInteracting) {
-
-        let nextRow =
-          currentRow +
-          SCROLL_ROWS;
-
-
-        if (
-          nextRow >=
-          logoRows.length
-        ) {
-
-          nextRow = 0;
+            logoTrack.style.transform =
+                `translateY(-${position}px)`;
 
         }
 
 
-        goToRow(nextRow);
-
-      }
-
-    },
-    AUTO_SCROLL_TIME
-  );
-
-}
+        updateHighlight();
 
 
-// ------------------------------------
-// SCROLL EVENT
-// ------------------------------------
+        requestAnimationFrame(
+            animate
+        );
 
-sliderWrapper.addEventListener(
-  'scroll',
-  updateHighlight
-);
+    }
 
 
-// ------------------------------------
-// PAUSE ON HOVER
-// ------------------------------------
+    /* ==========================================
+       PAUSE ON HOVER
+    ========================================== */
 
-sliderWrapper.addEventListener(
-  'mouseenter',
-  () => {
+    sliderWrapper.addEventListener(
+        'mouseenter',
+        () => {
 
-    isUserInteracting = true;
+            isPaused = true;
 
-    clearInterval(
-      autoScrollInterval
+        }
     );
 
-  }
-);
+
+    sliderWrapper.addEventListener(
+        'mouseleave',
+        () => {
+
+            isPaused = false;
+
+            lastTime =
+                performance.now();
+
+        }
+    );
 
 
-sliderWrapper.addEventListener(
-  'mouseleave',
-  () => {
+    /* ==========================================
+       INITIALIZE
+    ========================================== */
 
-    isUserInteracting = false;
-
-    startAutoScroll();
-
-  }
-);
-
-
-// ------------------------------------
-// INITIALIZE
-// ------------------------------------
-
-window.addEventListener(
-  'load',
-  () => {
+    calculateHeight();
 
     updateHighlight();
 
-    startAutoScroll();
 
-  }
-);
+    window.addEventListener(
+        'resize',
+        calculateHeight
+    );
+
+
+    requestAnimationFrame(
+        animate
+    );
+
+});
 // ////////////////////////////////////////////
     const slider = document.querySelector('.slider');
     const left = document.querySelector('.left');
@@ -327,57 +361,180 @@ window.addEventListener(
 
     const counters = document.querySelectorAll(".count");
 
+
 const startCounter = (counter) => {
-  const target = parseFloat(counter.getAttribute("data-target"));
-  const type = counter.getAttribute("data-type");
 
-  let start = 0;
-  const duration = 5000; // 2 seconds
-  const startTime = performance.now();
+    const target =
+        parseFloat(
+            counter.getAttribute("data-target")
+        );
 
-  function updateCounter(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
+    const type =
+        counter.getAttribute("data-type");
 
-    const value = progress * target;
 
-    if (type === "million") {
-      counter.innerHTML = `+${value.toFixed(1)} <span>M</span>`;
-    } 
-    else if (type === "ratio") {
-      counter.innerHTML = `${Math.floor(value)}:1`;
-    } 
-    else if (type === "plus") {
-      counter.innerHTML = `${Math.floor(value)}+`;
-    } 
-    else if (type === "percent") {
-      counter.innerHTML = `${Math.floor(value)}%`;
-    } 
-    else if (type === "range") {
-      counter.innerHTML = `2–${Math.floor(value)}`;
+    const duration = 5000;
+
+    const startTime =
+        performance.now();
+
+
+    function updateCounter(currentTime) {
+
+        const elapsed =
+            currentTime - startTime;
+
+
+        const progress =
+            Math.min(
+                elapsed / duration,
+                1
+            );
+
+
+        /*
+         * Smooth ease-out
+         *
+         * Starts fast and gradually slows
+         * down towards the final value.
+         */
+        const easedProgress =
+            1 -
+            Math.pow(
+                1 - progress,
+                4
+            );
+
+
+        const value =
+            easedProgress * target;
+
+
+        /* =====================================
+           MILLION
+        ===================================== */
+
+        if (type === "million") {
+
+            counter.innerHTML =
+                `+${value.toFixed(1)} <span>M</span>`;
+
+        }
+
+
+        /* =====================================
+           RATIO
+        ===================================== */
+
+        else if (type === "ratio") {
+
+            counter.innerHTML =
+                `${Math.floor(value)}:1`;
+
+        }
+
+
+        /* =====================================
+           PLUS
+        ===================================== */
+
+        else if (type === "plus") {
+
+            counter.innerHTML =
+                `${Math.floor(value)}+`;
+
+        }
+
+
+        /* =====================================
+           PERCENT
+        ===================================== */
+
+        else if (type === "percent") {
+
+            counter.innerHTML =
+                `${Math.floor(value)}%`;
+
+        }
+
+
+        /* =====================================
+           RANGE
+        ===================================== */
+
+        else if (type === "range") {
+
+            counter.innerHTML =
+                `2–${Math.floor(value)}%`;
+
+        }
+
+
+        /* =====================================
+           CONTINUE
+        ===================================== */
+
+        if (progress < 1) {
+
+            requestAnimationFrame(
+                updateCounter
+            );
+
+        }
+
+
+        /* =====================================
+           FINAL VALUES
+        ===================================== */
+
+        else {
+
+            if (type === "million") {
+
+                counter.innerHTML =
+                    `+1.2 <span>M</span>`;
+
+            }
+
+            else if (type === "ratio") {
+
+                counter.innerHTML =
+                    `4:1`;
+
+            }
+
+            else if (type === "plus") {
+
+                counter.innerHTML =
+                    `${target}+`;
+
+            }
+
+            else if (type === "percent") {
+
+                counter.innerHTML =
+                    `${target}%`;
+
+            }
+
+            else if (type === "range") {
+
+                counter.innerHTML =
+                    `2–4`;
+
+            }
+
+        }
+
     }
 
-    if (progress < 1) {
-      requestAnimationFrame(updateCounter);
-    } else {
-      // Final exact value
-      if (type === "million") {
-        counter.innerHTML = `+1.2 <span>M</span>`;
-      } else if (type === "ratio") {
-        counter.innerHTML = `4:1`;
-      } else if (type === "plus") {
-        counter.innerHTML = `${target}+`;
-      } else if (type === "percent") {
-        counter.innerHTML = `${target}%`;
-      } else if (type === "range") {
-        counter.innerHTML = `2–4`;
-      }
-    }
-  }
 
-  requestAnimationFrame(updateCounter);
+    requestAnimationFrame(
+        updateCounter
+    );
+
 };
-
+// //////////////
 
 // Start animation when section becomes visible
 const statsSection = document.querySelector(".stats-section");
@@ -389,6 +546,7 @@ const observer = new IntersectionObserver(
         counters.forEach((counter) => {
           startCounter(counter);
         });
+
 
         observer.unobserve(entry.target);
       }

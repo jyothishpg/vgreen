@@ -57,7 +57,7 @@ linear-gradient(0deg, rgba(2, 3, 59, 0.7), rgba(2, 3, 59, 0.7));
 }
 .about-page .testimonial-bg-wrapper {
 
-    background: url(../images/testimonial/testimonial-bg.png) no-repeat;
+    background: url(../images/testimonial/testimonial-bg.webp) no-repeat;
 }
 
 /* =========================================
@@ -66,7 +66,7 @@ linear-gradient(0deg, rgba(2, 3, 59, 0.7), rgba(2, 3, 59, 0.7));
 
 .about-page .testimonial-slider {
     position: relative;
-    background: url(../images/testimonial/testimonial-bg.png) no-repeat;
+    background: url(../images/testimonial/testimonial-bg.webp) no-repeat;
 
     width: 100%;
     /* max-width: 1350px; */
@@ -218,7 +218,7 @@ box-shadow: 0px 4px 4px 0px #00000040;
     z-index: -1;
 
     background:
-        url("assets/images/testimonial-1.jpg")
+        url("assets/images/testimonial-1.webp")
         center / cover no-repeat;
 
     filter: blur(18px);
@@ -913,7 +913,7 @@ background-position: right;
     position: absolute;
     right: -50px;
     bottom: 0;
-  background: url(../images/join-border.png) no-repeat;    
+  background: url(../images/join-border.webp) no-repeat;    
   background-size: contain;
 }
 
@@ -1303,7 +1303,7 @@ vertical-align: middle;
     height: 70px;
     left: 0;
     top: 0;
-    background: url(../images/quot.svg.png);
+    background: url(../images/quot.svg.webp);
     display: flex;
     align-items: start;
 }
@@ -1564,19 +1564,19 @@ vertical-align: middle;
         0 8px 20px rgba(0, 0, 0, 0.2);
 }
 .offline-location-card.usa {
-    background: url(../images/location-1.png);
+    background: url(../images/location-1.webp);
 }
 .offline-location-card.kochi {
-    background: url(../images/location-2.png);
+    background: url(../images/location-2.webp);
 }
 .offline-location-card.kochi-1 {
-    background: url(../images/location-3.png);
+    background: url(../images/location-3.webp);
 }
 .offline-location-card.australia {
-    background: url(../images/location-4.png);
+    background: url(../images/location-4.webp);
 }
 .offline-location-card.canada {
-    background: url(../images/location-5.png);
+    background: url(../images/location-5.webp);
 }
 
 /* =====================================
@@ -1660,19 +1660,19 @@ vertical-align: middle;
 
 }
 .offline-location-card.usa .offline-location-content {
-    background: url(../images/location1-right.png);
+    background: url(../images/location1-right.webp);
 }
 .offline-location-card.kochi .offline-location-content {
-    background: url(../images/location2-right.png);
+    background: url(../images/location2-right.webp);
 }
 .offline-location-card.kochi-1 .offline-location-content {
-    background: url(../images/location3-right.png);
+    background: url(../images/location3-right.webp);
 }
 .offline-location-card.australia .offline-location-content {
-    background: url(../images/location4-right.png);
+    background: url(../images/location4-right.webp);
 }
 .offline-location-card.canada .offline-location-content {
-    background: url(../images/location5-right.png);
+    background: url(../images/location5-right.webp);
 }
 
 /* Heading */

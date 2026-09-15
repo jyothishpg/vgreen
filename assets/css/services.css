@@ -27,7 +27,7 @@ body.services-page .header.scrolled {
 
 
 .services-section {
-    background: url('../images/services-bg.png') center/cover no-repeat;
+    background: url('../images/services-bg.webp') center/cover no-repeat;
     height: auto;
     display: flex;
     align-items: center;
@@ -154,7 +154,7 @@ body.services-page .header.scrolled {
 
 .what-we-do {
     padding: 120px 0px 65px 0;
-    background: url(../images/services-main-bg.png) no-repeat;
+    background: url(../images/services-main-bg.webp) no-repeat;
     background-size:cover;
     background-position: left top;
     transition: background 0.3s ease;
