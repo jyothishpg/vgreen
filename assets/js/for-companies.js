@@ -35,3 +35,39 @@ window.addEventListener('load', () => {
   animateValue('verticals', 0, 18, 1500);   // suffix "+"
   animateValue('accuracy', 0, 94, 1500);    // suffix "%"
 });
+
+ document.addEventListener('DOMContentLoaded', () => {
+
+  const newsletter = document.querySelector('.newsletter-section');
+
+  if (!newsletter) return;
+
+  function newsletterParallax() {
+
+    const rect = newsletter.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.bottom > 0 && rect.top < windowHeight) {
+
+      const progress =
+        (windowHeight - rect.top) /
+        (windowHeight + rect.height);
+
+      // Background vertical movement
+      const y = (progress - 0.5) * -80;
+
+      // More background height
+      // 130% → 115%
+      const zoom = 200 - (progress * 15);
+
+      newsletter.style.backgroundPosition = `center ${y}px`;
+      newsletter.style.backgroundSize = `${zoom}% auto`;
+    }
+  }
+
+  window.addEventListener('scroll', newsletterParallax);
+  window.addEventListener('resize', newsletterParallax);
+
+  newsletterParallax();
+
+});

@@ -14,7 +14,7 @@ linear-gradient(0deg, rgba(1, 36, 45, 0.5), rgba(1, 36, 45, 0.5));
 }
 body.for-talents .header.scrolled {
   background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(1, 36, 45, 0.7), rgba(1, 36, 45, 0.7));
+linear-gradient(0deg, rgba(1, 36, 45, 1), rgba(1, 36, 45, 1));
 
 
 
@@ -26,7 +26,7 @@ body.for-talents .logo img {
 }
 
 body.for-talents .nav-container {
-    padding: 16px 0px;
+    /* padding: 16px 0px; */
 }
 
 body.for-talents .btn-lets-connect {

@@ -1,4 +1,4 @@
-const header = document.querySelector('body.services-page .header');
+const header = document.querySelector('body.blog-page .header');
 
 window.addEventListener('scroll', function () {
   const headerHeight = header.offsetHeight;
@@ -8,29 +8,6 @@ window.addEventListener('scroll', function () {
   } else {
     header.classList.remove('scrolled');
   }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-
-    const track = document.querySelector(".slider-track");
-    const slides = document.querySelectorAll(".slide");
-
-    let currentSlide = 0;
-
-    setInterval(function () {
-
-        currentSlide++;
-
-        if (currentSlide >= slides.length) {
-            currentSlide = 0;
-        }
-
-        track.style.transform =
-            `translateX(-${currentSlide * 100}%)`;
-
-    }, 4000);
-
 });
  document.addEventListener('DOMContentLoaded', () => {
 

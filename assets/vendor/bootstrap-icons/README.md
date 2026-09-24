@@ -26,15 +26,15 @@
 
 Bootstrap Icons are packaged up and published to npm. We only include the processed SVGs in this package—it's up to you and your team to implement. [Read our docs](https://icons.getbootstrap.com/) for usage instructions.
 
-```shell
+shell
 npm i bootstrap-icons
-```
+
 
 For those [using Packagist](https://packagist.org/packages/twbs/bootstrap-icons), you can also install Bootstrap Icons via Composer:
 
-```shell
+shell
 composer require twbs/bootstrap-icons
-```
+
 
 [Also available in Figma](https://www.figma.com/community/file/1042482994486402696/Bootstrap-Icons).
 
@@ -56,12 +56,12 @@ Depending on your setup, you can include Bootstrap Icons in a handful of ways.
 
 Clone the repo, install dependencies, and start the Hugo server locally.
 
-```shell
+shell
 git clone https://github.com/twbs/icons/
 cd icons
 npm i
 npm start
-```
+
 
 Then open `http://localhost:4000` in your browser.
 

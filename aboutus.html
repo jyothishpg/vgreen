@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -61,7 +62,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <a href="#" class="btn-lets-connect" id="letsConnectBtn">Lets Connect</a>
+        <button class="btn-lets-connect" id="letsConnectBtn">Lets Connect</button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -73,65 +74,136 @@
 
 
 
-  <section class="testimonial-section">
+<section class="testimonial-section">
 
     <div class="testimonial-slider">
-<div class="decor-image decor-top-left">
-    <img src="assets/images/testimonial/1.webp" alt="">
-</div>
 
-<div class="decor-image decor-top-right">
-    <img src="assets/images/testimonial/2.webp" alt="">
-</div>
+        <!-- Decorative Images -->
 
-<div class="decor-image decor-bottom-left">
-    <img src="assets/images/testimonial/3.webp" alt="">
-</div>
+        <div class="decor-image decor-top-left" data-aos="fade-up" data-aos-duration="3000">
+            <img src="assets/images/testimonial/1.webp" alt="">
+        </div>
 
-<div class="decor-image decor-bottom-right">
-    <img src="assets/images/testimonial/4.webp" alt="">
-</div>
+        <div class="decor-image decor-top-right" data-aos="fade-down" data-aos-duration="3000">
+            <img src="assets/images/testimonial/2.webp" alt="">
+        </div>
+
+        <div class="decor-image decor-bottom-left" data-aos="fade-up" data-aos-duration="3000">
+            <img src="assets/images/testimonial/3.webp" alt="">
+        </div>
+
+        <div class="decor-image decor-bottom-right" data-aos="fade-down" data-aos-duration="3000">
+            <img src="assets/images/testimonial/4.webp" alt="">
+        </div>
 
 
-        <!-- Left Arrow -->
-        <button class="slider-arrow slider-prev" id="prevBtn" aria-label="Previous">
+        <!-- Previous -->
+
+        <button
+            class="slider-arrow slider-prev"
+            id="prevBtn"
+            aria-label="Previous"
+            type="button">
+
             <span></span>
+
         </button>
 
 
-        <!-- Main Card -->
+        <!-- Testimonial Card -->
+
         <div class="testimonial-card">
 
-            <div class="testimonial-content" id="testimonialContent">
+            <div class="testimonial-track" id="testimonialTrack">
 
-                <h2 id="testimonialTitle">
-                    A Trusted Hiring Partner
-                </h2>
+                <!-- Slide 1 -->
 
-                <p class="testimonial-subtitle" id="testimonialSubtitle">
-                    Consistently delivering the right talent through deep understanding of business needs.
-                </p>
+                <div class="testimonial-slide">
 
-                <p class="testimonial-text" id="testimonialText">
-                    For more than a year, VGreenTEK has been our primary talent acquisition partner. Their team invests time in understanding our exact requirements and consistently provides candidates who align with our expectations. This partnership has helped us build a strong delivery team capable of meeting client demands and supporting project execution with confidence. I would gladly recommend them to any growing technology company.
-                </p>
+                    <div class="testimonial-content">
 
-                <div class="testimonial-author">
+                        <h2 class="testimonialTitle" ></h2>
 
-                    <div class="author-name" id="authorName">
-                        Sunil Joseph
+                        <p class="testimonial-subtitle"></p>
+
+                        <p class="testimonial-text"></p>
+
+                        <div class="testimonial-author">
+
+                            <div class="author-name"></div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                            <div class="company-name"></div>
+
+                            <div class="author-role"></div>
+
+                        </div>
+
                     </div>
 
-                    <div class="stars" id="authorStars">
-                        ★★★★★
+                </div>
+
+
+                <!-- Slide 2 -->
+
+                <div class="testimonial-slide">
+
+                    <div class="testimonial-content">
+
+                        <h2 class="testimonialTitle"></h2>
+
+                        <p class="testimonial-subtitle"></p>
+
+                        <p class="testimonial-text"></p>
+
+                        <div class="testimonial-author">
+
+                            <div class="author-name"></div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                            <div class="company-name"></div>
+
+                            <div class="author-role"></div>
+
+                        </div>
+
                     </div>
 
-                    <div class="company-name" id="companyName">
-                        <img src="assets/images/testimonial/testimonial-logo-1.webp" alt="">
-                    </div>
+                </div>
 
-                    <div class="author-role" id="authorRole">
-                        Founder & CEO – DigiRell
+
+                <!-- Slide 3 -->
+
+                <div class="testimonial-slide">
+
+                    <div class="testimonial-content">
+
+                        <h2 class="testimonialTitle"></h2>
+
+                        <p class="testimonial-subtitle"></p>
+
+                        <p class="testimonial-text"></p>
+
+                        <div class="testimonial-author">
+
+                            <div class="author-name"></div>
+
+                            <div class="stars">
+                                ★★★★★
+                            </div>
+
+                            <div class="company-name"></div>
+
+                            <div class="author-role"></div>
+
+                        </div>
+
                     </div>
 
                 </div>
@@ -141,9 +213,16 @@
         </div>
 
 
-        <!-- Right Arrow -->
-        <button class="slider-arrow slider-next" id="nextBtn" aria-label="Next">
+        <!-- Next -->
+
+        <button
+            class="slider-arrow slider-next"
+            id="nextBtn"
+            aria-label="Next"
+            type="button">
+
             <span></span>
+
         </button>
 
     </div>
@@ -153,74 +232,216 @@
 
 <section class="safe-hands-section">
     <div class="container-safehand">
-      <div class="image-box">
-        <img src="assets/images/about-1.webp" alt="Professional working with server" />
-      </div>
 
-      <div class="text-box">
-        <p class="small-text">WHY VGreenTEK</p>
-        <h1>Put your business<br>in our safe hands</h1>
-        <p>
-          <strong>VGreenTEK</strong> sits at the intersection of technology and human potential.
-        </p>
-        <p>
-          We are <strong>Recruiters who understand business.</strong> Consultants who understand people. Designers who understand purpose.
-        </p>
-        <p>
-          Our team blends deep expertise across IT staffing, technology consulting, workforce solutions, and design, applying creative and precise care to a collection of services. We don’t just fill roles — we build partnerships.
-        </p>
-        <p>We stay, adapt, and grow with you.</p>
-        <a href="#" class="btn">Learn More</a>
-      </div>
+        <div
+            class="image-box"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-easing="ease-out-cubic">
+
+            <img src="assets/images/about-1.webp" alt="Professional working with server" />
+        </div>
+
+        <div
+            class="text-box"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic">
+
+            <p
+                class="small-text"
+                data-aos="fade-up"
+                data-aos-duration="800"
+                data-aos-delay="300">
+                WHY VGreenTEK
+            </p>
+
+            <h1
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="400">
+                Put your business<br>in our safe hands
+            </h1>
+
+            <p
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="500">
+                <strong>VGreenTEK</strong> sits at the intersection of technology and human potential.
+            </p>
+
+            <p
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="600">
+                We are <strong>Recruiters who understand business.</strong> Consultants who understand people. Designers who understand purpose.
+            </p>
+
+            <p
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="700">
+                Our team blends deep expertise across IT staffing, technology consulting, workforce solutions, and design, applying creative and precise care to a collection of services. We don’t just fill roles — we build partnerships.
+            </p>
+
+            <p
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="800">
+                We stay, adapt, and grow with you.
+            </p>
+
+            <a
+                href="#"
+                class="btn"
+                data-aos="zoom-in"
+                data-aos-duration="800"
+                data-aos-delay="900">
+                Learn More
+            </a>
+
+        </div>
     </div>
-  </section>
+</section>
 
-  <section class="join-section">
+<section class="join-section">
     <div class="container-join">
-      <div class="header-join">
-        <h1>Join us</h1>
-        <button class="all-events">All events</button>
-      </div>
 
-      <div class="event-card">
-        <div class="event-info">
-          <span class="date">December 15, 2022</span>
-          <h2>Attention-Grabbing Marketing in a Noisy Market</h2>
+        <div
+            class="header-join"
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aos-easing="ease-out-cubic">
+
+            <h1
+                data-aos="fade-down"
+                data-aos-duration="900"
+                data-aos-delay="100">
+                Join us
+            </h1>
+
+            <button
+                class="all-events"
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aos-delay="200">
+                All events
+            </button>
         </div>
 
-        <div class="event-image">
-          <img src="assets/images/join-us.webp" alt="Event Speakers" />
+        <div class="event-card">
+
+            <div
+                class="event-info"
+                data-aos="fade-down"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                data-aos-easing="ease-out-cubic">
+
+                <span
+                    class="date"
+                    data-aos="fade-up"
+                    data-aos-duration="800"
+                    data-aos-delay="400">
+                    December 15, 2022
+                </span>
+
+                <h2
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aos-delay="500">
+                    Attention-Grabbing Marketing in a Noisy Market
+                </h2>
+
+            </div>
+
+            <div
+                class="event-image"
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="300"
+                data-aos-easing="ease-out-cubic">
+
+                <img
+                    src="assets/images/join-us.webp"
+                    alt="Event Speakers"
+                    data-aos="zoom-in"
+                    data-aos-duration="900"
+                    data-aos-delay="500" />
+
+            </div>
+
         </div>
-      </div>
     </div>
-  </section>
+</section>
 
 
-  <section class="about-section">
+<section class="about-section">
   <div class="about-container">
-    <div class="image-box left">
+
+    <div
+      class="image-box left"
+      data-aos="fade-down"
+      data-aos-duration="1000"
+      data-aos-delay="100"
+      data-aos-easing="ease-out-cubic">
       <img src="assets/images/person-left.webp" alt="Team Member Left">
     </div>
 
-    <div class="about-content">
-      <h2>About</h2>
-      <p>
+    <div
+      class="about-content"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      data-aos-easing="ease-out-cubic">
+
+      <h2
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-delay="300">
+        About
+      </h2>
+
+      <p
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="400">
         We believe the right people, in the right roles, with the right tools — change everything.
         <br>
         VGreenTEK is a technology, talent, and consulting company built for organizations that refuse to stand still.
       </p>
-      <p>
+
+      <p
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aos-delay="500">
         We help businesses grow through smarter hiring, sharper strategy, and solutions designed with precision.
         We help people find opportunities where they can truly do their best work.
         <br>
         That's not a tagline. That's how we operate — every day.
       </p>
-      <button class="about-btn">More About Us</button>
+
+      <button
+        class="about-btn"
+        data-aos="zoom-in"
+        data-aos-duration="800"
+        data-aos-delay="600">
+        More About Us
+      </button>
+
     </div>
 
-    <div class="image-box right">
+    <div
+      class="image-box right"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-delay="200"
+      data-aos-easing="ease-out-cubic">
       <img src="assets/images/person-right.webp" alt="Team Member Right">
     </div>
+
   </div>
 </section>
 <section class="section-aboutus-testimonial-slider">
@@ -364,160 +585,273 @@
 
 </section>
 
-  <section class="newsletter-section">
-    <div class="container">
-      <div class="content">
-        <h2>Signup for the<br>newsletter</h2>
-      </div>
+ <section class="newsletter-section">
 
+    <div class="container">
+
+      <div class="content">
+        <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
+          Signup for the<br>newsletter
+        </h2>
+      </div>
 
       <div class="form-wrapper">
-        <p class="subtext">Stay connected</p>
-        <form class="signup-form">
-          <div class="form-group">
+
+        <p class="subtext" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+          Stay connected
+        </p>
+
+        <form class="signup-form" id="signupForm">
+
+          <div class="form-group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
+
             <input type="text" id="name" name="name" required />
-            <label for="name">First name</label>
+
+            <label for="name">
+              First name
+            </label>
+
           </div>
 
-          <div class="form-group">
+
+          <div class="form-group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+
             <div class="email-field">
+
               <input type="email" id="email" name="email" required />
-            <label for="email">Email</label>
-              <button type="submit" class="arrow-btn">→</button>
+
+              <label for="email">
+                Email
+              </label>
+
+              <button type="submit" class="arrow-btn">
+                →
+              </button>
+
             </div>
+
           </div>
+          <div id="signupMessage"></div>
         </form>
+
+
       </div>
+
     </div>
+
   </section>
 
-  <section class="offline-locations">
+<section class="offline-locations">
 
-    <div class="offline-locations-container">
+  <div class="offline-locations-container">
 
-        <h2 class="offline-locations-title">
-            Offline Locations
-        </h2>
-
-
-        <div class="offline-locations-grid">
-
-            <!-- Location 1 -->
-            <div class="offline-location-card usa">
-
-                <div class="offline-location-image">
-                    <!-- <img src="images/location-usa.webp" alt="USA"> -->
-                </div>
-
-                <div class="offline-location-content">
-                  <div class="right-content">
- <h3>USA:</h3>
-
-                    <p>
-                        G VreenteK, 1st floor, 14/291, N<br>
-                        suite 37K, Kakkad, Ernakulam,<br>
-                        Kerala, 683561 India.
-                    </p>
-                  </div>
-                   
-                </div>
-
-            </div>
+    <h2
+      class="offline-locations-title"
+      data-aos="fade-up"
+      data-aos-duration="1000"
+      data-aos-easing="ease-out-cubic">
+      Offline Locations
+    </h2>
 
 
-            <!-- Location 2 -->
-            <div class="offline-location-card kochi">
+    <div class="offline-locations-grid">
 
-                <div class="offline-location-image">
-                    <!-- <img src="images/location-kochi.webp" alt="Kochi"> -->
-                </div>
+      <!-- Location 1 -->
+      <div
+        class="offline-location-card usa"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="100"
+        data-aos-easing="ease-out-cubic">
 
-                <div class="offline-location-content">
-                   <div class="right-content">
-                    <h3>KOCHI:</h3>
+        <div
+          class="offline-location-image"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="150">
+          <!-- <img src="images/location-usa.webp" alt="USA"> -->
+        </div>
 
-                    <p>
-                        D N 0/143K, Grand Central,<br>
-                        Logistic Park, Kakkad,<br>
-                        Ernakulam, Kerala, India.
-                    </p>
-                   </div>
-                    
-                </div>
+        <div
+          class="offline-location-content"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="250">
 
-            </div>
+          <div class="right-content">
 
+            <h3>USA:</h3>
 
-            <!-- Location 3 -->
-            <div class="offline-location-card kochi-1">
+            <p>
+              G VreenteK, 1st floor, 14/291, N<br>
+              suite 37K, Kakkad, Ernakulam,<br>
+              Kerala, 683561 India.
+            </p>
 
-                <div class="offline-location-image">
-                    <!-- <img src="images/location-kochi2.webp" alt="Kochi"> -->
-                </div>
-
-                <div class="offline-location-content">
-                   <div class="right-content">
-                    <h3>KOCHI:</h3>
-
-                    <p>
-                        G VreenteK, 1st floor, 14/291, N<br>
-                        suite 37K, Kakkad, Ernakulam,<br>
-                        Kerala, 683561 India.
-                    </p>
-                   </div>
-                    
-                </div>
-
-            </div>
-
-
-            <!-- Location 4 -->
-            <div class="offline-location-card australia">
-
-                <div class="offline-location-image">
-                    <!-- <img src="images/location-australia.webp" alt="Australia"> -->
-                </div>
-
-                <div class="offline-location-content">
-                   <div class="right-content">
-                     <h3>AUSTRALIA:</h3>
-
-                    <p>
-                        Courner Brisbane & Mackenzie<br>
-                        Street PO Box 18,<br>
-                        2329 Australia.
-                    </p>
-                   </div>
-                   
-                </div>
-
-            </div>
-
-
-            <!-- Location 5 -->
-            <div class="offline-location-card canada offline-location-card-last">
-
-                <div class="offline-location-image">
-                    <!-- <img src="images/location-canada.webp" alt="Canada"> -->
-                </div>
-
-                <div class="offline-location-content">
-                   <div class="right-content">
-                    <h3>CANADA:</h3>
-
-                    <p>
-                        46 Natalie Court Thorold, ON<br>
-                        L2V5C6, Canada
-                    </p>
-                   </div>
-                    
-                </div>
-
-            </div>
+          </div>
 
         </div>
 
+      </div>
+
+
+      <!-- Location 2 -->
+      <div
+        class="offline-location-card kochi"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="200"
+        data-aos-easing="ease-out-cubic">
+
+        <div
+          class="offline-location-image"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="250">
+          <!-- <img src="images/location-kochi.webp" alt="Kochi"> -->
+        </div>
+
+        <div
+          class="offline-location-content"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="350">
+
+          <div class="right-content">
+
+            <h3>KOCHI:</h3>
+
+            <p>
+              D N 0/143K, Grand Central,<br>
+              Logistic Park, Kakkad,<br>
+              Ernakulam, Kerala, India.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Location 3 -->
+      <div
+        class="offline-location-card kochi-1"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="300"
+        data-aos-easing="ease-out-cubic">
+
+        <div
+          class="offline-location-image"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="350">
+          <!-- <img src="images/location-kochi2.webp" alt="Kochi"> -->
+        </div>
+
+        <div
+          class="offline-location-content"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="450">
+
+          <div class="right-content">
+
+            <h3>KOCHI:</h3>
+
+            <p>
+              G VreenteK, 1st floor, 14/291, N<br>
+              suite 37K, Kakkad, Ernakulam,<br>
+              Kerala, 683561 India.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Location 4 -->
+      <div
+        class="offline-location-card australia"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="400"
+        data-aos-easing="ease-out-cubic">
+
+        <div
+          class="offline-location-image"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="450">
+          <!-- <img src="images/location-australia.webp" alt="Australia"> -->
+        </div>
+
+        <div
+          class="offline-location-content"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="550">
+
+          <div class="right-content">
+
+            <h3>AUSTRALIA:</h3>
+
+            <p>
+              Courner Brisbane & Mackenzie<br>
+              Street PO Box 18,<br>
+              2329 Australia.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- Location 5 -->
+      <div
+        class="offline-location-card canada offline-location-card-last"
+        data-aos="fade-down"
+        data-aos-duration="1000"
+        data-aos-delay="500"
+        data-aos-easing="ease-out-cubic">
+
+        <div
+          class="offline-location-image"
+          data-aos="zoom-in"
+          data-aos-duration="900"
+          data-aos-delay="550">
+          <!-- <img src="images/location-canada.webp" alt="Canada"> -->
+        </div>
+
+        <div
+          class="offline-location-content"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="650">
+
+          <div class="right-content">
+
+            <h3>CANADA:</h3>
+
+            <p>
+              46 Natalie Court Thorold, ON<br>
+              L2V5C6, Canada
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
     </div>
+
+  </div>
 
 </section>
 
@@ -568,9 +902,16 @@
 
   <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="assets/js/menu-toggle.js"></script>
   <script src="assets/js/about.js"></script>
-
+<script>
+    AOS.init({
+    duration: 800,
+    once: true,
+    offset: 100
+  });
+  </script>
 </body>
 
 </html>

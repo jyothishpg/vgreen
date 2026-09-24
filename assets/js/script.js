@@ -1,81 +1,207 @@
 
 
 
-// banner
-document.addEventListener('DOMContentLoaded', () => {
-    const slides = document.querySelectorAll('.hero-slide');
-    const dots = document.querySelectorAll('.slider-dots .dot');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    const sliderSection = document.getElementById('heroSlider');
-    
+// HERO VIDEO SLIDER
+document.addEventListener("DOMContentLoaded", () => {
+
+    const hero = document.getElementById("heroSlider");
+
+    if (!hero) return;
+
+    const slides = hero.querySelectorAll(".hero-slide");
+    const dots = hero.querySelectorAll(".slider-dots .dot");
+    const prevBtn = hero.querySelector("#prevBtn");
+    const nextBtn = hero.querySelector("#nextBtn");
+
+    if (!slides.length) return;
+
     let currentIndex = 0;
-    let slideInterval;
-    const intervalTime = 6000; // 6 seconds per slide
+    let slideTimer = null;
 
-    // Function to change active slide
+    const slideDuration = 12000;
+
+
+    // --------------------------------
+    // PLAY VIDEO
+    // --------------------------------
+
+    function playVideo(slide) {
+
+        const video = slide.querySelector(".hero-video");
+
+        if (!video) return;
+
+        video.muted = true;
+        video.playsInline = true;
+
+        const playPromise = video.play();
+
+        if (playPromise !== undefined) {
+
+            playPromise
+                .then(() => {
+                    console.log("Playing:", video.currentSrc);
+                })
+                .catch(error => {
+                    console.log("Autoplay prevented:", error);
+                });
+
+        }
+    }
+
+
+    // --------------------------------
+    // STOP VIDEO
+    // --------------------------------
+
+    function stopVideo(slide) {
+
+        const video = slide.querySelector(".hero-video");
+
+        if (!video) return;
+
+        video.pause();
+
+        // Don't reset currentTime.
+        // iPhone Safari can take extra time when
+        // the video has to seek back to 0.
+    }
+
+
+    // --------------------------------
+    // LOAD VIDEO
+    // --------------------------------
+
+    function loadVideo(slide) {
+
+        const video = slide.querySelector(".hero-video");
+
+        if (!video) return;
+
+        /*
+         * If video was initially preload="none",
+         * calling load() starts loading it.
+         */
+        if (video.readyState === 0) {
+            video.load();
+        }
+    }
+
+
+    // --------------------------------
+    // GO TO SLIDE
+    // --------------------------------
+
     function goToSlide(index) {
-        slides.forEach(slide => slide.classList.remove('active'));
-        dots.forEach(dot => dot.classList.remove('active'));
 
-        currentIndex = (index + slides.length) % slides.length;
+        clearTimeout(slideTimer);
 
-        slides[currentIndex].classList.add('active');
-        dots[currentIndex].classList.add('active');
-    }
+        currentIndex =
+            (index + slides.length) % slides.length;
 
-    // Next / Prev slide handlers
-    function nextSlide() {
-        goToSlide(currentIndex + 1);
-    }
 
-    function prevSlide() {
-        goToSlide(currentIndex - 1);
-    }
+        slides.forEach((slide, i) => {
 
-    // Event listeners for buttons
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetTimer();
-    });
+            if (i === currentIndex) {
 
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetTimer();
-    });
+                slide.classList.add("active");
 
-    // Event listeners for dots
-    dots.forEach(dot => {
-        dot.addEventListener('click', (e) => {
-            const slideIndex = parseInt(e.target.getAttribute('data-slide'));
-            goToSlide(slideIndex);
-            resetTimer();
+                // Load only current video
+                loadVideo(slide);
+
+                // Start playback
+                playVideo(slide);
+
+            } else {
+
+                slide.classList.remove("active");
+
+                stopVideo(slide);
+            }
+
         });
-    });
 
-    // Auto play functionality
-    function startTimer() {
-        slideInterval = setInterval(nextSlide, intervalTime);
+
+        // Update dots
+
+        dots.forEach((dot, i) => {
+
+            dot.classList.toggle(
+                "active",
+                i === currentIndex
+            );
+
+        });
+
+
+        // Next slide
+
+        slideTimer = setTimeout(() => {
+
+            goToSlide(currentIndex + 1);
+
+        }, slideDuration);
+
     }
 
-    function resetTimer() {
-        clearInterval(slideInterval);
-        startTimer();
+
+    // --------------------------------
+    // NEXT
+    // --------------------------------
+
+    if (nextBtn) {
+
+        nextBtn.addEventListener("click", () => {
+
+            goToSlide(currentIndex + 1);
+
+        });
+
     }
 
-    // Pause autoplay on mouse hover
-    sliderSection.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
+
+    // --------------------------------
+    // PREVIOUS
+    // --------------------------------
+
+    if (prevBtn) {
+
+        prevBtn.addEventListener("click", () => {
+
+            goToSlide(currentIndex - 1);
+
+        });
+
+    }
+
+
+    // --------------------------------
+    // DOTS
+    // --------------------------------
+
+    dots.forEach(dot => {
+
+        dot.addEventListener("click", () => {
+
+            const index = parseInt(
+                dot.getAttribute("data-slide"),
+                10
+            );
+
+            goToSlide(index);
+
+        });
+
     });
 
-    sliderSection.addEventListener('mouseleave', () => {
-        startTimer();
-    });
 
-    // Initialize auto play timer
-    startTimer();
+    // --------------------------------
+    // START
+    // --------------------------------
+
+    goToSlide(0);
+
 });
-// banner
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -590,3 +716,317 @@ letsConnectBtn.addEventListener('click', openForm);
 closeForm.addEventListener('click', closeFormPanel);
 overlay.addEventListener('click', closeFormPanel);
 
+
+
+
+// HERO VIDEO LOADER
+document.addEventListener("DOMContentLoaded", () => {
+
+    const loader = document.getElementById("pageLoader");
+    const firstVideo = document.querySelector(
+        ".hero-slide.slide-1 .hero-video"
+    );
+
+    if (!loader || !firstVideo) return;
+
+
+    let ready = false;
+
+
+    function hideLoader() {
+
+        if (ready) return;
+
+        ready = true;
+
+        console.log("First hero video ready");
+
+        loader.classList.add("hide");
+
+        setTimeout(() => {
+
+            if (loader && loader.parentNode) {
+                loader.remove();
+            }
+
+        }, 700);
+    }
+
+
+    // First frame available
+
+    firstVideo.addEventListener(
+        "loadeddata",
+        () => {
+
+            console.log("Hero video loadeddata");
+
+            hideLoader();
+
+        },
+        {
+            once: true
+        }
+    );
+
+
+    // Video can start playing
+
+    firstVideo.addEventListener(
+        "canplay",
+        () => {
+
+            console.log("Hero video canplay");
+
+            hideLoader();
+
+        },
+        {
+            once: true
+        }
+    );
+
+
+    // Actually playing
+
+    firstVideo.addEventListener(
+        "playing",
+        () => {
+
+            console.log("Hero video playing");
+
+            hideLoader();
+
+        },
+        {
+            once: true
+        }
+    );
+
+
+    // Already loaded
+
+    if (firstVideo.readyState >= 2) {
+
+        hideLoader();
+
+    }
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const tabs = document.querySelectorAll(".tab");
+  const panels = document.querySelectorAll(".tab-panel");
+
+  tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+      const target = tab.getAttribute("data-tab");
+
+      // Remove active from all tabs
+      tabs.forEach(item => {
+        item.classList.remove("active");
+      });
+
+      // Remove active from all panels
+      panels.forEach(panel => {
+        panel.classList.remove("active");
+      });
+
+      // Activate clicked tab
+      tab.classList.add("active");
+
+      // Activate corresponding content
+      const targetPanel = document.getElementById(target);
+
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+      }
+
+    });
+
+  });
+
+});
+
+
+// Google form
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("signupMessage");
+
+    if (!form) return;
+
+    form.addEventListener("submit", async (e) => {
+
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+
+        if (!name || !email) {
+            return;
+        }
+
+        const submitButton = form.querySelector(".arrow-btn");
+
+        submitButton.disabled = true;
+
+        try {
+
+            await fetch("https://script.google.com/macros/s/AKfycbw08LNuPFvp4idLJ8A7fThp-ApTAwjyHJKN2jwpOjFnsYuHqAY6SV5AJ5iii1KfFy68/exec", {
+                method: "POST",
+                mode: "no-cors",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8"
+                },
+                body: JSON.stringify({
+                    name: name,
+                    email: email
+                })
+            });
+
+            message.textContent = "Thank you for subscribing!";
+            message.className = "success-message";
+
+            form.reset();
+
+        } catch (error) {
+
+            console.error(error);
+
+            message.textContent =
+                "Something went wrong. Please try again.";
+
+            message.className = "error-message";
+
+        } finally {
+
+            submitButton.disabled = false;
+        }
+
+    });
+
+});
+
+const indexHeader = document.querySelector('body.indexpage .header');
+
+window.addEventListener('scroll', function () {
+  const headerHeight = indexHeader.offsetHeight;
+
+  if (window.scrollY > headerHeight) {
+    indexHeader.classList.add('scrolled');
+  } else {
+    indexHeader.classList.remove('scrolled');
+  }
+});
+
+
+// send us message
+const form = document.getElementById("contactFormSendus");
+
+form.addEventListener("submit", async function (e) {
+
+  e.preventDefault();
+
+  const button = form.querySelector(".send-btn");
+
+  button.disabled = true;
+  button.textContent = "SENDING...";
+
+  const formData = {
+    fullName: form.fullName.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    company: form.company.value,
+    service: form.service.value,
+    challenge: form.challenge.value
+  };
+
+  try {
+
+    await fetch(
+      "https://script.google.com/macros/s/AKfycbxyGkW-dyqBVuchFl_Cn4XDqIlDUxryT9AbfA9VRQ5021gemIHasZVCmwZv6NzzyrIH/exec",
+      {
+        method: "POST",
+        mode: "no-cors",
+        body: JSON.stringify(formData)
+      }
+    );
+
+    form.reset();
+
+    button.textContent = "MESSAGE SENT";
+
+    setTimeout(() => {
+      button.textContent = "SEND MESSAGE";
+      button.disabled = false;
+    }, 3000);
+
+  } catch (error) {
+
+    console.error(error);
+
+    button.textContent = "TRY AGAIN";
+    button.disabled = false;
+  }
+
+});
+
+
+// thanksou send us
+const thankYouMessage = document.getElementById("thankYouMessage");
+
+form.addEventListener("submit", function () {
+
+  const button = form.querySelector(".send-btn");
+
+  button.disabled = true;
+  button.textContent = "SENDING...";
+
+  // After successful Google Sheet submission:
+  form.style.display = "none";
+  document.querySelector(".form-header").style.display = "none";
+  thankYouMessage.style.display = "block";
+
+});
+
+ document.addEventListener('DOMContentLoaded', () => {
+
+  const newsletter = document.querySelector('.newsletter-section');
+
+  if (!newsletter) return;
+
+  function newsletterParallax() {
+
+    const rect = newsletter.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (rect.bottom > 0 && rect.top < windowHeight) {
+
+      const progress =
+        (windowHeight - rect.top) /
+        (windowHeight + rect.height);
+
+      // Background vertical movement
+      const y = (progress - 0.5) * -80;
+
+      // More background height
+      // 130% → 115%
+      const zoom = 200 - (progress * 15);
+
+      newsletter.style.backgroundPosition = `center ${y}px`;
+      newsletter.style.backgroundSize = `${zoom}% auto`;
+    }
+  }
+
+  window.addEventListener('scroll', newsletterParallax);
+  window.addEventListener('resize', newsletterParallax);
+
+  newsletterParallax();
+
+});

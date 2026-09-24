@@ -20,6 +20,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="../assets/vendor/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
@@ -30,7 +31,7 @@
       <!-- Logo Section -->
       <a href="../index.html" class="logo">
         <div class="logo-mark">
-          <img src="../../assets/images/logo.webp" alt="logo">
+          <img src="../assets/images/logo.webp" alt="logo">
         </div>
       </a>
 
@@ -53,7 +54,7 @@
               <li><a href="blog.html#blog-section">Blog</a></li>
             </ul>
           </li>
-          <li><a href="blog/blog.html">Insights</a></li>
+          <li><a href="blog.html">Insights</a></li>
           <li><a href="../aboutus.html">Who We Are?</a></li>
           <li><a href="../carrer.html">Careers</a></li>
         </ul>
@@ -61,7 +62,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <a href="#" class="btn-lets-connect" id="letsConnectBtn">Lets Connect</a>
+        <button class="btn-lets-connect" id="letsConnectBtn">Lets Connect</button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -73,264 +74,774 @@
   <div class="blog-wrapper">
     <section class="articles-section">
       <div class="container">
-        <h2 class="section-title">Recent articles</h2>
+
+        <h2 class="section-title" data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-out-cubic">
+          Recent articles
+        </h2>
+
         <div class="articles-container">
-          <div class="article-card">
-            <img src="../assets/images/article-1.webp" alt="Concora Credit" class="article-image">
-            <span class="card-badge">CaseStudy</span>
-            <h3 class="article-title">Augmenting Concora Credit's Cloud Engineering Team with Staff Augmentation Mode
+
+          <div class="article-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"
+            data-aos-easing="ease-out-cubic">
+
+            <img src="../assets/images/article-1.webp" alt="Concora Credit" class="article-image" data-aos="zoom-in"
+              data-aos-duration="900" data-aos-delay="150">
+
+            <span class="card-badge" data-aos="fade-down" data-aos-duration="800" data-aos-delay="250">
+              CaseStudy
+            </span>
+
+            <h3 class="article-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+              Augmenting Concora Credit's Cloud Engineering Team with Staff Augmentation Mode
             </h3>
-            <a href="#" class="read-link">Read</a>
+
+            <a href="#" class="read-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+              Read
+            </a>
+
           </div>
 
-          <div class="article-card">
-            <img src="../assets/images/article-2.webp" alt="Team Collaboration" class="article-image">
-            <span class="card-badge">Insight</span>
-            <h3 class="article-title">Design Is Not Decoration: How Strategic Design Drives Business Growth</h3>
-            <a href="#" class="read-link">Read</a>
+
+          <div class="article-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250"
+            data-aos-easing="ease-out-cubic">
+
+            <img src="../assets/images/article-2.webp" alt="Team Collaboration" class="article-image" data-aos="zoom-in"
+              data-aos-duration="900" data-aos-delay="300">
+
+            <span class="card-badge" data-aos="fade-down" data-aos-duration="800" data-aos-delay="400">
+              Insight
+            </span>
+
+            <h3 class="article-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="450">
+              Design Is Not Decoration: How Strategic Design Drives Business Growth
+            </h3>
+
+            <a href="#" class="read-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550">
+              Read
+            </a>
+
           </div>
 
-          <div class="article-card">
-            <img src="../assets/images/article-3.webp" alt="Elevate HR Conclave" class="article-image">
-            <span class="card-badge">Event</span>
-            <h3 class="article-title">HR Evolve Elevate '26: Where Technology Meets Empathy</h3>
-            <a href="#" class="read-link">Read</a>
+
+          <div class="article-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400"
+            data-aos-easing="ease-out-cubic">
+
+            <img src="../assets/images/article-3.webp" alt="Elevate HR Conclave" class="article-image"
+              data-aos="zoom-in" data-aos-duration="900" data-aos-delay="450">
+
+            <span class="card-badge" data-aos="fade-down" data-aos-duration="800" data-aos-delay="550">
+              Event
+            </span>
+
+            <h3 class="article-title" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
+              HR Evolve Elevate '26: Where Technology Meets Empathy
+            </h3>
+
+            <a href="#" class="read-link" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+              Read
+            </a>
+
           </div>
+
         </div>
       </div>
     </section>
 
-   
+
 
   </div>
-   <section class="case-studies" id="case-study-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="title">Case Studies</h2>
+  <section class="case-studies" id="case-study-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
 
-      <div class="grid">
-        <div class="card">
-          <img src="../assets/images/blog/case-1.webp" alt="Telemedicine Solution">
-          <div class="content">
-            <h3>From QA to Launch in 3 Wks: Implementing the First Telemedicine Solution for the Biggest Eye Care
-              Hospital</h3>
-            <p>A functional telemedicine solution enabling one of the largest eye hospitals to provide remote eye care
-              services.</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
+        <h2
+          class="title"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic">
+          Case Studies
+        </h2>
 
-        <div class="card">
-          <img src="../assets/images/blog/case-2.webp" alt="Concora Credit">
-          <div class="content">
-            <h3>Powering the Concora Credit System Development with Real-Time Transaction Data</h3>
-            <p>A secure and scalable credit system that leverages real-time transaction data for better risk management.
-            </p>
-            <span class="plus">+</span>
-          </div>
-        </div>
+        <div class="grid">
 
-        <div class="card">
-          <img src="../assets/images/blog/case-3.webp" alt="Driverless Car">
-          <div class="content">
-            <h3>Building India’s First Driverless Car from Scratch: From Hardware Design to Road Testing</h3>
-            <p>A full-stack autonomous vehicle solution enabling seamless navigation and obstacle detection in
-              uncontrolled environments.</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-easing="ease-out-cubic">
 
-        <div class="card">
-          <img src="../assets/images/blog/case-4.webp" alt="Fintech Data">
-          <div class="content">
-            <h3>How We Helped a Fintech Firm Manage 1M+ Finance Transactions</h3>
-            <p>A data-driven solution enabling a fintech client to manage over a million transactions daily through
-              high-performance data processing.</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
-      </div>
+            <img
+              src="../assets/images/blog/case-1.webp"
+              alt="Telemedicine Solution"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="150">
 
-      <div class="load-more">
-        <span>+</span>
-      </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <hr class="border-blog">
-          </div>
-        </div>
-      </div>
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="250">
 
-    <section class="case-studies blog-post" id="blog-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="title">Blog Posts</span></h2>
+              <h3>From QA to Launch in 3 Wks: Implementing the First Telemedicine Solution for the Biggest Eye Care
+                Hospital</h3>
 
-      <div class="grid">
-        <div class="card">
-          <img src="../assets/images/blog/blog-1.webp" alt="Telemedicine Solution">
-          <div class="content">
-            <h3>The Future of Work: Why Businesses Need Both Talent and Technology to Scale</h3>
-            <p>Growth Requires More Than One Solution</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
+              <p>A functional telemedicine solution enabling one of the largest eye hospitals to provide remote eye
+                care
+                services.</p>
 
-        <div class="card">
-          <img src="../assets/images/blog/blog-2.webp" alt="Concora Credit">
-          <div class="content">
-            <h3>Building High-Performing Teams: The Competitive Advantage Most Companies Overlook</h3>
-            <p>Every Successful Business Starts With People
-            </p>
-            <span class="plus">+</span>
-          </div>
-        </div>
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="350"
+                data-bs-toggle="modal"
+                /* data-bs-target="#modal-case-study-1" */
+                >
+                +
+              </span>
 
-        <div class="card">
-          <img src="../assets/images/blog/blog-3.webp" alt="Driverless Car">
-          <div class="content">
-            <h3>Design Is Not Decoration: How Strategic Design Drives Business Growth</h3>
-            <p>The Most Successful Brands Design With Purpose</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="../assets/images/blog/blog-4.webp" alt="Fintech Data">
-          <div class="content">
-            <h3>Custom Software vs. Off-the-Shelf Solutions: Making the Right Technology Investment</h3>
-            <p>One Size Doesn't Always Fit All</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="load-more">
-        <span>+</span>
-      </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-        <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <hr class="border-event">
-          </div>
-        </div>
-      </div>
-
-    <section class="case-studies event-post" id="event-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="title">Events</h2>
-
-      <div class="grid">
-        <div class="card">
-          <img src="../assets/images/blog/event-1.webp" alt="Telemedicine Solution">
-          <div class="content">
-            <h3>HR Evolve Elevate '26: Where Technology Meets Empathy</h3>
-            <p>Exploring the future of HR through conversations, collaboration, and forward-thinking insights..</p>
-            <span class="plus">+</span>
-          </div>
-        </div>
-
-        <div class="card">
-          <img src="../assets/images/blog/event-2.webp" alt="Concora Credit">
-          <div class="content">
-            <h3>Building Meaningful Connections at the BNI India National Conference 2026 - JAIPUR</h3>
-            <p>The BNI India National Conference 2026 in Jaipur brought together entrepreneurs, business leaders, and professionals from across the country 
-            </p>
-            <span class="plus">+</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="load-more">
-        <span>+</span>
-      </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  <section class="newsletter-section">
-    <div class="container">
-      <div class="content">
-        <h2>Signup for the<br>newsletter</h2>
-      </div>
-
-
-      <div class="form-wrapper">
-        <p class="subtext">Stay connected</p>
-        <form class="signup-form">
-          <div class="form-group">
-            <input type="text" id="name" name="name" required />
-            <label for="name">First name</label>
-          </div>
-
-          <div class="form-group">
-            <div class="email-field">
-              <input type="email" id="email" name="email" required />
-              <label for="email">Email</label>
-              <button type="submit" class="arrow-btn">→</button>
             </div>
           </div>
-        </form>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/case-2.webp"
+              alt="Concora Credit"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="250">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="350">
+
+              <h3>Powering the Concora Credit System Development with Real-Time Transaction Data</h3>
+
+              <p>A secure and scalable credit system that leverages real-time transaction data for better risk
+                management.
+              </p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="450">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/case-3.webp"
+              alt="Driverless Car"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="350">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="450">
+
+              <h3>Building India’s First Driverless Car from Scratch: From Hardware Design to Road Testing</h3>
+
+              <p>A full-stack autonomous vehicle solution enabling seamless navigation and obstacle detection in
+                uncontrolled environments.</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="550">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/case-4.webp"
+              alt="Fintech Data"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="450">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="550">
+
+              <h3>How We Helped a Fintech Firm Manage 1M+ Finance Transactions</h3>
+
+              <p>A data-driven solution enabling a fintech client to manage over a million transactions daily through
+                high-performance data processing.</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="650">
+                +
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div
+          class="load-more"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="700"
+          data-aos-easing="ease-out-cubic">
+
+          <span
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="750">
+            +
+          </span>
+
+        </div>
+
       </div>
     </div>
+  </div>
+</section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="border-blog">
+      </div>
+    </div>
+  </div>
+
+<section class="case-studies blog-post" id="blog-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h2
+          class="title"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic">
+          Blog Posts
+        </h2>
+
+        <div class="grid">
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/blog-1.webp"
+              alt="Telemedicine Solution"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="150">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="250">
+
+              <h3>The Future of Work: Why Businesses Need Both Talent and Technology to Scale</h3>
+              <p>Growth Requires More Than One Solution</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="350">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/blog-2.webp"
+              alt="Concora Credit"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="250">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="350">
+
+              <h3>Building High-Performing Teams: The Competitive Advantage Most Companies Overlook</h3>
+              <p>Every Successful Business Starts With People
+              </p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="450">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="300"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/blog-3.webp"
+              alt="Driverless Car"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="350">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="450">
+
+              <h3>Design Is Not Decoration: How Strategic Design Drives Business Growth</h3>
+              <p>The Most Successful Brands Design With Purpose</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="550">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="400"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/blog-4.webp"
+              alt="Fintech Data"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="450">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="550">
+
+              <h3>Custom Software vs. Off-the-Shelf Solutions: Making the Right Technology Investment</h3>
+              <p>One Size Doesn't Always Fit All</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="650">
+                +
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div
+          class="load-more"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="700"
+          data-aos-easing="ease-out-cubic">
+
+          <span
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="750">
+            +
+          </span>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <hr class="border-event">
+      </div>
+    </div>
+  </div>
+
+<section class="case-studies event-post" id="event-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <h2
+          class="title"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-easing="ease-out-cubic">
+          Events
+        </h2>
+
+        <div class="grid">
+
+          <div
+            class="card"
+            data-aos="fade-down"
+            data-aos-duration="1000"
+            data-aos-delay="100"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/event-1.webp"
+              alt="Telemedicine Solution"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="150">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="250">
+
+              <h3>HR Evolve Elevate '26: Where Technology Meets Empathy</h3>
+
+              <p>Exploring the future of HR through conversations, collaboration, and forward-thinking insights..</p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="350">
+                +
+              </span>
+
+            </div>
+          </div>
+
+
+          <div
+            class="card"
+            data-aos="fade-up"
+            data-aos-duration="1000"
+            data-aos-delay="200"
+            data-aos-easing="ease-out-cubic">
+
+            <img
+              src="../assets/images/blog/event-2.webp"
+              alt="Concora Credit"
+              data-aos="zoom-in"
+              data-aos-duration="900"
+              data-aos-delay="250">
+
+            <div
+              class="content"
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aos-delay="350">
+
+              <h3>Building Meaningful Connections at the BNI India National Conference 2026 - JAIPUR</h3>
+
+              <p>The BNI India National Conference 2026 in Jaipur brought together entrepreneurs, business leaders,
+                and professionals from across the country
+              </p>
+
+              <span
+                class="plus"
+                data-aos="zoom-in"
+                data-aos-duration="700"
+                data-aos-delay="450">
+                +
+              </span>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div
+          class="load-more"
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aos-delay="500"
+          data-aos-easing="ease-out-cubic">
+
+          <span
+            data-aos="zoom-in"
+            data-aos-duration="700"
+            data-aos-delay="600">
+            +
+          </span>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <section class="newsletter-section">
+
+    <div class="container">
+
+      <div class="content">
+        <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
+          Signup for the<br>newsletter
+        </h2>
+      </div>
+
+      <div class="form-wrapper">
+
+        <p class="subtext" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+          Stay connected
+        </p>
+
+        <form class="signup-form" id="signupForm">
+
+          <div class="form-group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="350">
+
+            <input type="text" id="name" name="name" required />
+
+            <label for="name">
+              First name
+            </label>
+
+          </div>
+
+
+          <div class="form-group" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="500">
+
+            <div class="email-field">
+
+              <input type="email" id="email" name="email" required />
+
+              <label for="email">
+                Email
+              </label>
+
+              <button type="submit" class="arrow-btn">
+                →
+              </button>
+
+            </div>
+
+          </div>
+          <div id="signupMessage"></div>
+        </form>
+
+
+      </div>
+
+    </div>
+
   </section>
 
 
   <section class="global-section">
-    <div class="map-bg"></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="map-bg" data-aos="fade-in" data-aos-duration="1500">
+
+
+            <!-- Kochi - VGreenTEK -->
+            <div class="location-marker location-kochi-1">
+              <span class="marker-dot"></span>
+
+              <div class="location-info">
+                <h4>KOCHI</h4>
+                <p>
+                  VGreenTEK, 1st Floor, 14/291,<br>
+                  N Suite 37K, Kakkanad,<br>
+                  Ernakulam, Kerala, 683561, India.
+                </p>
+              </div>
+            </div>
+
+
+            <!-- Kochi - Grand Central -->
+            <div class="location-marker location-kochi-2">
+              <span class="marker-dot"></span>
+
+              <div class="location-info">
+                <h4>KOCHI</h4>
+                <p>
+                  D No IX/483, Grand Central,<br>
+                  Logistic Park, Kakkanad,<br>
+                  Ernakulam, Kerala, India.
+                </p>
+              </div>
+            </div>
+
+
+            <!-- Australia -->
+            <div class="location-marker location-australia">
+              <span class="marker-dot"></span>
+
+              <div class="location-info">
+                <h4>AUSTRALIA</h4>
+                <p>
+                  Corner Brisbane &amp; Mackenzie Street,<br>
+                  PO Box 168, Merriwa,<br>
+                  NSW 2329, Australia.
+                </p>
+              </div>
+            </div>
+
+
+            <!-- Canada -->
+            <div class="location-marker location-canada">
+              <span class="marker-dot"></span>
+
+              <div class="location-info">
+                <h4>CANADA</h4>
+                <p>
+                  46 Natalie Court,<br>
+                  Thorold, ON L2V 5C6,<br>
+                  Canada.
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     <div class="contact-panel">
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100"
+        data-aos-easing="ease-out-cubic">
+
         <h4>KOCHI:</h4>
         <p>VGreenTEK, 1st floor, 14/291, N suite 37K<br>
           Kakkanad, Ernakulam, Kerala, 683561 India.</p>
+
       </div>
 
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200"
+        data-aos-easing="ease-out-cubic">
+
         <h4>KOCHI:</h4>
         <p>D NO IX/483 Grand Central, Logistic Park,<br>
           Kakkanad, Ernakulam, Kerala, India.</p>
+
       </div>
 
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300"
+        data-aos-easing="ease-out-cubic">
+
         <h4>AUSTRALIA:</h4>
         <p>Courner Brisbane & Mackenzie Street PO Box 168,<br>
           Merriwa NSW 2329, Australia.</p>
+
       </div>
 
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400"
+        data-aos-easing="ease-out-cubic">
+
         <h4>CANADA:</h4>
         <p>46 Natalie Court Thorold,<br>ON L2V5C6, Canada.</p>
+
       </div>
 
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500"
+        data-aos-easing="ease-out-cubic">
+
         <h4>USA:</h4>
         <p>+1 972 812 4305<br>
           <a href="mailto:hr@vgreentek.com">hr@vgreentek.com</a>
         </p>
+
       </div>
 
-      <div class="contact-item">
+
+      <div class="contact-item" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600"
+        data-aos-easing="ease-out-cubic">
+
         <h4>Reach out Via</h4>
         <p>+1 972 812 4305<br>
           <a href="mailto:info@vgreentek.com">info@vgreentek.com</a>
         </p>
+
       </div>
+
     </div>
+
   </section>
 
   <footer class="footer">
@@ -419,13 +930,67 @@
   <div id="overlay" class="overlay"></div>
 
 
+  <div
+    class="modal fade modal-blog"
+    id="modal-case-study-1"
+    tabindex="-1"
+    aria-labelledby="contentModalLabel"
+    aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+
+      
+         <div class="modal-content">
+ <div class="container">
+            <div class="modal-header">
+
+                <h5 class="modal-title" id="contentModalLabel">
+                    SUCCESS STORY
+                </h5>
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close">
+                </button>
+
+            </div>
+
+            <div class="modal-body p-0">
+
+                <iframe
+                    id="modalIframe"
+                    src="detail-blog.html"
+                    width="100%"
+                    height="600"
+                    frameborder="0">
+                </iframe>
+
+            </div>
+
+        </div>
+       </div>
+
+    </div>
+
+</div>
+
+
+
   <script src="../assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="../assets/js/script.js"></script>
   <script src="../assets/js/menu-toggle.js"></script>
   <script src="../assets/js/animation.js"></script>
+  <script src="../assets/js/blog.js"></script>
   <script>
-
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
   </script>
 
 </body>

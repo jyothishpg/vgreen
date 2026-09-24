@@ -13,7 +13,7 @@ linear-gradient(0deg, rgba(5, 49, 86, 0.5), rgba(5, 49, 86, 0.5));
 }
 body.software-page .header.scrolled {
     background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(5, 49, 86, 0.7), rgba(5, 49, 86, 0.7));
+linear-gradient(0deg, rgba(5, 49, 86, 1), rgba(5, 49, 86, 1));
 
 }
 body.software-page .logo img {

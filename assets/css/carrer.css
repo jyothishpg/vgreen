@@ -103,15 +103,43 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
-
+/* 
 .life-career {
-  background: url(../images/career/carrer-bg.png) no-repeat center center;
+  background: url(../images/career/carrer-bg.webp) no-repeat center center;
   color: #0a0a23;
   padding: 80px 20px;
   text-align: start;
   background-size: cover;
+} */
+.life-career {
+  position: relative;
+  min-height: 600px;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
+.life-career-bg {
+  position: absolute;
+  z-index: 0;
+
+  top: -100px;
+  left: 0;
+
+  width: 100%;
+  height:100%;
+
+  background-image: url("../images/career/carrer-bg.webp");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  will-change: transform;
+}
+
+.life-career .container {
+  position: relative;
+  z-index: 2;
+}
 .life-career h2 {
   font-family: "Literata", serif;
   font-weight: 600;
@@ -516,3 +544,4 @@ body.career-page .btn-lets-connect {
 body.career-page .header.scrolled {
    background: #BFA3FF;
 }
+
