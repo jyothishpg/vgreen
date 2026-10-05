@@ -1,6 +1,20 @@
 body.recruitment-page {
-    background: linear-gradient(180deg, #FFFFFF 0%, #3564C5 100%);
-
+    /* background: linear-gradient(180deg, #FFFFFF 0%, #3564C5 100%); */
+background: linear-gradient(
+    180deg,
+    #FFFFFF 0%,
+    #F5F8FC 5%,
+    #EBEFF9 10%,
+    #D6E0F3 20%,
+    #C3D1EE 30%,
+    #AEC1E8 40%,
+    #9AB1E2 50%,
+    #85A2DC 60%,
+    #7293D6 70%,
+    #5E83D1 80%,
+    #4974CB 90%,
+    #3564C5 100%
+);
 }
 
 body.recruitment-page .header {
@@ -9,8 +23,8 @@ body.recruitment-page .header {
 
 }
 body.recruitment-page .header.scrolled {
-background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-        linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1));
+/* background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+        linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1)); */
 
 }
 
@@ -44,12 +58,15 @@ body.recruitment-page .header.scrolled {
     position: relative;
     width: 100%;
     height: 100%;
+    
+
 }
 
 .recruitment-page .banner-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-bottom-right-radius: 300px;
 }
 
 .recruitment-page .banner-overlay {
@@ -59,8 +76,10 @@ body.recruitment-page .header.scrolled {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 60px 40px;
+    padding: 60px 120px;
     box-sizing: border-box;
+
+    border-bottom-right-radius: 300px;
 }
 
 .recruitment-page .banner-content {
@@ -69,16 +88,16 @@ body.recruitment-page .header.scrolled {
 
 .recruitment-page .banner-tag {
     display: inline-block;
-    background-color: rgba(255, 255, 255, 0.25);
-    color: #fff;
+    background-color: rgb(8, 37, 200, .29);
+    color: #02033B;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 6px 14px;
     border-radius: 20px;
     margin-bottom: 20px;
     position: absolute;
-    top: 200px;
-    left: 3%;
+    top: 150px;
+    left: 120px;
 }
 
 .recruitment-page h1 {
@@ -204,12 +223,20 @@ body.recruitment-page .header.scrolled {
     flex: 2 1 600px;
     display: flex;
     flex-direction: column;
-    border-left: 2px solid #0045FF;
+    /* border-left: 2px solid #0045FF; */
+    border-left: 2px solid transparent;
+  border-image: linear-gradient(
+    to bottom,
+    rgba(59, 108, 255, 0),
+    #3b6cff 20%,
+    #3b6cff 80%,
+    rgba(59, 108, 255, 0)
+  ) 1;
     padding-left: 32px;
 }
 
 .why-offer-section .offer-item {
-    border-bottom: 2px solid #0045FF;
+    border-bottom: 1px solid #0045FF;
     padding: 32px 0;
 }
 
@@ -597,7 +624,6 @@ margin-bottom: 90px;
   justify-content: center;
   text-align: center;
   padding: 80px 0px;
-  border-top: 3px solid #0045FF
 }
 
 .team-section .content {
@@ -681,3 +707,6 @@ padding: 13px 20px;
   }
 }
 
+.recruitment-page .faq-section {
+    background:transparent;
+}

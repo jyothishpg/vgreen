@@ -530,7 +530,7 @@ body.career-page .header {
 }
 body.career-page .logo img {
   width:auto;
-  height: 55px;
+  /* height: 55px; */
 }
 body.career-page .nav-container {
   padding: 16px 0px;
@@ -542,6 +542,6 @@ body.career-page .btn-lets-connect {
 
 }
 body.career-page .header.scrolled {
-   background: #BFA3FF;
+   /* background: #BFA3FF; */
 }
 

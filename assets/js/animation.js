@@ -17,3 +17,48 @@ const leftSectionObserver = new IntersectionObserver(
 if (leftSectionElement) {
   leftSectionObserver.observe(leftSectionElement);
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+
+    const sections = document.querySelectorAll('.lazy-section');
+
+    if (!sections.length) {
+        return;
+    }
+
+    const sectionObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) {
+                    return;
+                }
+
+                const section = entry.target;
+
+                // Trigger section loading
+                section.classList.add('is-loaded');
+
+                // Stop observing once loaded
+                observer.unobserve(section);
+
+            });
+
+        },
+        {
+            root: null,
+
+            // Start loading before section reaches viewport
+            rootMargin: '250px 0px',
+
+            threshold: 0.01
+        }
+    );
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+});

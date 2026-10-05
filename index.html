@@ -62,7 +62,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <button class="btn-lets-connect" id="letsConnectBtn">Lets Connect</button>
+        <button class="btn-lets-connect" id="letsConnectBtn"><span>Lets Connect</span></button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -73,7 +73,7 @@
   </header>
 
 
-  <section class="hero-slider-section" id="heroSlider">
+  <section class="hero-slider-section lazy-section" id="heroSlider">
     <div class="hero-slides-container">
 
       <!-- Slide 1 -->
@@ -237,9 +237,10 @@
       <span class="dot" data-slide="3"></span>
       <span class="dot" data-slide="4"></span>
     </div>
+    <div class="hero-progress" id="heroProgress"></div>
   </section>
   <div class="main-content-wrapper">
-    <div class="main-container">
+    <div class="main-container lazy-section">
       <!-- Left Section -->
       <div class="left-section">
         <h1>Forward-thinking teams choose VGreenTEK.</h1>
@@ -390,7 +391,15 @@
                 <img src="assets/images/slider/23.webp" alt="">
               </div>
               <div class="logo-item">
-                <img src="assets/images/slider/2.webp" alt="">
+                <img src="assets/images/slider/24.webp" alt="">
+              </div>
+            </div>
+            <div class="logo-row">
+              <div class="logo-item">
+                <img src="assets/images/slider/25.webp" alt="">
+              </div>
+              <div class="logo-item">
+                <img src="assets/images/slider/21.webp" alt="">
               </div>
             </div>
           </div>
@@ -408,9 +417,9 @@
       </div>
 
     </div>
+    <section class="case-studies-section lazy-section">
+      <div class="container-fluid">
 
-    <div class="container">
-      <section class="case-studies-section">
 
         <div class="case-studies-grid">
           <img src="assets/images/highlight-top-left.webp" alt="" class="highlight-1">
@@ -510,12 +519,12 @@
           </article>
 
         </div>
-      </section>
-    </div>
 
-    <section class="testimonial-section" data-aos="fade-up" data-aos-duration="3000">
+      </div>
+    </section>
+    <section class="testimonial-section lazy-section">
       <div class="container">
-        <div class="d-flex justify-content-between align-items-bottom">
+        <div class="d-flex justify-content-between align-items-bottom" data-aos="fade-up" data-aos-duration="3000">
           <h2 class="animated-title" data-aos="fade-up" data-aos-duration="3000"><span>Loved & Trusted</span></h2>
           <div class="position-relative">
             <div class="d-flex arrow-wrapper">
@@ -529,7 +538,7 @@
           </div>
         </div>
       </div>
-      <div class="slider-container">
+      <div class="slider-container lazy-section">
 
         <div class="slider">
           <div class="card">
@@ -567,12 +576,15 @@
       </div>
     </section>
 
-    <div class="container">
-      <section class="stats-section" data-aos="fade-up" data-aos-duration="3000">
+    <section class="stats-section lazy-section">
+      <div class="container-fluid">
         <h2 data-aos="fade-up" data-aos-duration="3000">Why companies large<br>and small trust VGreenTEK</h2>
-        <p class="subtext">Contact Sales to Schedule a Call.</p>
+        <p id="bookCallTrigger" class="subtext bookCallTrigger" role="button" tabindex="0" aria-haspopup="dialog"
+          aria-controls="bookCallPopover" aria-expanded="false">
+          Contact Sales to Schedule a Call.
+        </p>
 
-        <div class="stats-grid">
+        <div class="stats-grid" data-aos="fade-up" data-aos-duration="3000">
           <div class="stat-card">
             <h3 class="count" data-target="1.2" data-type="million">+1.2 <span>M</span></h3>
             <p>Candidate Resumes</p>
@@ -603,41 +615,13 @@
             <p>Hours of Turn Around Time</p>
           </div>
         </div>
-      </section>
-    </div>
-    <div class="container">
-      <!-- <section class="help-section">
-        <h2>How we can<br>help you grow</h2>
-        <div class="services">
-          <div class="service">
-            <span>Recruitment & Staffing</span>
-            <span class="arrow">
-              <img src="assets//images/arrow-white-bottom.webp" alt="">
-            </span>
-          </div>
-          <div class="service">
-            <span>Design Services</span>
-            <img src="assets//images/arrow-white-bottom.webp" alt="">
-          </div>
-          <div class="service">
-            <span>Custom Software Development</span>
-            <img src="assets//images/arrow-white-bottom.webp" alt="">
-          </div>
-          <div class="service">
-            <span>Learning & Development</span>
-            <img src="assets//images/arrow-white-bottom.webp" alt="">
-          </div>
-          <div class="service">
-            <span>People & Organisation</span>
-            <img src="assets//images/arrow-white-bottom.webp" alt="">
-          </div>
-        </div>
-      </section> -->
-
-      <section class="help-section" data-aos="fade-up" data-aos-duration="3000">
+      </div>
+    </section>
+    <section class="help-section lazy-section">
+      <div class="container-fluid">
         <h2 class="animated-title" data-aos="fade-up" data-aos-duration="3000">How we can<br>help you grow</h2>
 
-        <div class="services accordion" id="servicesAccordion">
+        <div class="services accordion" data-aos="fade-up" data-aos-duration="3000" id="servicesAccordion">
 
           <!-- Recruitment & Staffing -->
           <div class="service accordion-item">
@@ -866,14 +850,15 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
 
-    </div>
-    <section class="faq-section" id="faq-section" data-aos="fade-up" data-aos-duration="3000">
-      <div class="container">
+
+    <section class="faq-section lazy-section" id="faq-section">
+      <div class="container-fluid">
         <h2 class="faq-title" data-aos="fade-up" data-aos-duration="3000">COMMON<br>QUESTIONS</h2>
-        <div class="common-questions-tab">
+        <div class="common-questions-tab" data-aos="fade-up" data-aos-duration="3000">
           <div class="tab-container">
 
             <button class="tab active" data-tab="clients">
@@ -1691,13 +1676,14 @@
 
 
         </div>
+      </div>
     </section>
 
-    <section class="articles-section">
-      <div class="container">
+    <section class="articles-section lazy-section">
+      <div class="container-fluid">
         <h2 class="section-title">Recent articles</h2>
         <div class="articles-container">
-          <div class="article-card" data-aos="fade-up" data-aos-duration="3000">
+          <div class="article-card" data-aos="zoom-in" data-aos-duration="3000">
             <img src="assets/images/article-1.webp" alt="Concora Credit" class="article-image">
             <span class="card-badge">CaseStudy</span>
             <h3 class="article-title">Augmenting Concora Credit's Cloud Engineering Team with Staff Augmentation Mode
@@ -1705,14 +1691,14 @@
             <a href="#" class="read-link">Read</a>
           </div>
 
-          <div class="article-card" data-aos="fade-down" data-aos-duration="3000">
+          <div class="article-card" data-aos="zoom-in" data-aos-duration="3000">
             <img src="assets/images/article-2.webp" alt="Team Collaboration" class="article-image">
             <span class="card-badge">Insight</span>
             <h3 class="article-title">Design Is Not Decoration: How Strategic Design Drives Business Growth</h3>
             <a href="#" class="read-link">Read</a>
           </div>
 
-          <div class="article-card" data-aos="fade-up" data-aos-duration="3000">
+          <div class="article-card" data-aos="zoom-in" data-aos-duration="3000">
             <img src="assets/images/article-3.webp" alt="Elevate HR Conclave" class="article-image">
             <span class="card-badge">Event</span>
             <h3 class="article-title">HR Evolve Elevate '26: Where Technology Meets Empathy</h3>
@@ -1723,9 +1709,9 @@
     </section>
   </div>
 
-  <section class="newsletter-section">
+  <section class="newsletter-section lazy-section">
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="content">
         <h2 data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
@@ -1780,9 +1766,9 @@
   </section>
 
 
-  <section class="global-section">
+  <section class="global-section lazy-section">
 
-    <div class="container">
+    <div class="container-fluid">
       <div class="row">
         <div class="col-md-12">
           <div class="map-bg" data-aos="fade-in" data-aos-duration="1500">
@@ -1920,7 +1906,7 @@
 
   </section>
 
-  <footer class="footer">
+  <footer class="footer lazy-section">
     <div class="footer-top" data-aos="fade-up" data-aos-duration="3000">
       <div class="logo">
         <img src="assets/images/logo-footer.webp" alt="VGreenTEK Logo">
@@ -1931,7 +1917,10 @@
           <h5>Services</h5>
           <a href="for-talents.html">For Talent</a>
           <a href="for-companies.html">For Companies</a>
-          <a href="#">Book a Call</a>
+          <a href="#" class="bookCall bookCallTrigger" id="bookCallTrigger" aria-haspopup="dialog"
+            aria-controls="bookCallPopover" aria-expanded="false">
+            Book a Call
+          </a>
         </div>
 
         <div class="link-group">
@@ -1953,7 +1942,7 @@
     </div>
 
     <div class="footer-bottom" data-aos="fade-up" data-aos-duration="3000">
-      <div class="container d-flex justify-content-between">
+      <div class="container-fluid d-flex justify-content-between">
         <p>© 2026 VGreenTEK. All rights reserved.
           <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
         </p>
@@ -1971,7 +1960,7 @@
 
   <div id="contactForm" class="contact-form">
 
-    <span id="closeForm" class="close-btn">×</span>
+    <!-- <span id="closeForm" class="close-btn">×</span> -->
 
     <div class="form-header">
       <h2>Send us a message</h2>
@@ -1981,30 +1970,66 @@
       </p>
     </div>
 
-    <form id="contactFormSendus">
+    <form id="contactFormSendus" novalidate>
 
-      <label>FULL NAME*</label>
-      <input type="text" name="fullName" required>
+      <!-- Full Name -->
+      <div class="form-group">
+        <label for="fullName">FULL NAME*</label>
+        <input type="text" id="fullName" name="fullName" required>
+        <span class="error-message">
+          Full name is required to address you properly.
+        </span>
+      </div>
 
-      <label>EMAIL ADDRESS*</label>
-      <input type="email" name="email" required>
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">EMAIL ADDRESS*</label>
+        <input type="email" id="email" name="email" required>
+        <span class="error-message">
+          Please enter a valid email address.
+        </span>
+      </div>
 
-      <label>PHONE NUMBER</label>
-      <input type="tel" name="phone">
+      <!-- Phone -->
+      <div class="form-group">
+        <label for="phone">PHONE NUMBER</label>
+        <input type="tel" id="phone" name="phone">
+        <span class="error-message">
+          Please enter a valid phone number.
+        </span>
+      </div>
 
-      <label>COMPANY NAME*</label>
-      <input type="text" name="company" required>
+      <!-- Company -->
+      <div class="form-group">
+        <label for="company">COMPANY NAME*</label>
+        <input type="text" id="company" name="company" required>
+        <span class="error-message">
+          Company name is required.
+        </span>
+      </div>
 
-      <label>Which service interests you? *</label>
-      <input type="text" name="service" required>
+      <!-- Service -->
+      <div class="form-group">
+        <label for="service">WHICH SERVICE INTERESTS YOU? *</label>
+        <input type="text" id="service" name="service" required>
+        <span class="error-message">
+          Please let us know which service interests you.
+        </span>
+      </div>
 
-      <label>Tell us about your challenge *</label>
-      <textarea name="challenge" required></textarea>
+      <!-- Challenge -->
+      <div class="form-group">
+        <label for="challenge">TELL US ABOUT YOUR CHALLENGE *</label>
+        <textarea id="challenge" name="challenge" required></textarea>
+        <span class="error-message">
+          Please tell us about your challenge.
+        </span>
+      </div>
 
-      <button type="submit" class="send-btn">
+      <!-- Submit -->
+      <button type="submit" class="send-btn" id="submitBtn">
         SEND MESSAGE
       </button>
-
 
     </form>
 
@@ -2017,15 +2042,16 @@
         ✓
       </div>
 
-      <h2>Thank You!</h2>
+      <h2>Thank you!</h2>
 
       <p>
-        Your message has been sent successfully.
-        We'll get back to you within 24 hours.
+        <span>Your message has been sent.</span>
+        We've received your inquiry and our team is already reviewing your challenge. Expect a response in your inbox
+        shortly.
       </p>
 
       <button type="button" id="thankYouClose" class="send-btn">
-        CLOSE
+        SEND ANOTHER MESSAGE
       </button>
 
 
@@ -2069,11 +2095,148 @@
     </div>
   </div>
 
+  <section class="booking-popover" id="bookCallPopover" role="dialog" aria-modal="false"
+    aria-labelledby="bookCallTitle">
+    <header class="booking-heading">
+      <h2 id="bookCallTitle">Book a call</h2>
+      <p>Please enter your details to lock in your requested time.</p>
+    </header>
+
+    <div class="booking-content">
+      <form id="bookCallForm" novalidate>
+        <div class="panel details-panel">
+          <div class="field">
+            <label for="bookCallFullName">FULL NAME*</label>
+            <input id="bookCallFullName" name="bookCallFullName" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="bookCallEmail">EMAIL ADDRESS*</label>
+            <input id="bookCallEmail" name="bookCallEmail" type="email" autocomplete="email" required />
+          </div>
+          <div class="field">
+            <label for="bookCallPhone">PHONE NUMBER</label>
+            <input id="bookCallPhone" name="bookCallPhone" type="tel" autocomplete="tel" />
+          </div>
+          <p class="required-note">* Required fields. All information remains confidential.</p>
+          <p class="form-error" id="bookCallFormError" role="alert"></p>
+        </div>
+
+        <div class="panel calendar-panel" id="bookCallCalendarPanel">
+          <p class="section-label">SELECT PREFERRED SLOT</p>
+          <div class="month-nav">
+            <button class="nav-btn" id="bookCallPrevWeek" type="button" aria-label="Previous month">‹</button>
+            <strong id="bookCallWeekLabel">SEPTEMBER 2026</strong>
+            <button class="nav-btn" id="bookCallNextWeek" type="button" aria-label="Next month">›</button>
+          </div>
+          <div class="days" id="bookCallDays" aria-label="Choose a date"></div>
+          <hr class="divider" />
+          <p class="availability-label" id="bookCallAvailabilityLabel">Select a day to see available times</p>
+          <div class="time-grid" id="bookCallTimeSlots">
+            <button class="time-slot" type="button" disabled>--:-- --</button>
+            <button class="time-slot" type="button" disabled>--:-- --</button>
+            <button class="time-slot" type="button" disabled>--:-- --</button>
+            <button class="time-slot" type="button" disabled>--:-- --</button>
+          </div>
+          <div class="weekend-notice" id="bookCallWeekendNotice">
+            <strong>Weekend booking selected</strong>
+            This is a weekend request. The weekend booking details section will be added here once its design is
+            provided.
+          </div>
+          <button class="confirm-btn" id="bookCallSubmitBtn" type="submit">
+            <span class="btn-label">CONFIRM BOOKING</span><span class="cog" aria-hidden="true">⚙</span>
+          </button>
+        </div>
+      </form>
+
+      <!-- <section class="success" id="bookCallSuccessPanel" aria-live="polite">
+        <div class="check" aria-hidden="true">✓</div>
+        <h3>Booking Confirmed!</h3>
+        <p>Your slot has been successfully reserved. A calendar invitation and confirmation email have been sent to your inbox.</p>
+        <button class="confirm-btn" id="bookCallCloseSuccess" type="button">CLOSE</button>
+      </section> -->
+
+
+      <!-- Booking Success / Thank You Section -->
+      <section class="success" id="bookCallSuccessPanel" aria-live="polite">
+
+        <div class="booking-thankyou">
+
+
+          <!-- <p class="success-eyebrow">
+      <span>BOOKING</span> CONFIRMED
+    </p> -->
+          <div class="check" aria-hidden="true">✓</div>
+
+
+          <h3 class="success-title">BOOKING CONFIRMED</h3>
+
+          <p class="success-message">
+            Your call has been successfully booked.
+            We look forward to speaking with you.
+          </p>
+
+          <!-- Confirmed Appointment Details -->
+          <div class="confirmed-details">
+
+            <div class="confirmed-detail">
+              <span class="detail-label">Confirmed Appointment Details</span>
+              <span class="detail-value" id="confirmedBookingDate">
+                Thursday, September 17, 2026
+              </span>
+            </div>
+
+            <div class="confirmed-detail">
+              <span class="detail-value" id="confirmedBookingTime">
+                11:30 AM (ET)
+              </span>
+            </div>
+
+          </div>
+
+          <div class="success-bottom-divider mt-5"></div>
+
+          <!-- Add to Calendar -->
+          <button class="add-calendar-btn" id="bookCallAddToCalendar" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"
+              aria-hidden="true">
+              <rect x="3" y="5" width="18" height="16" rx="1"></rect>
+              <path d="M16 3v4M8 3v4M3 10h18"></path>
+              <path d="M8 14h.01M12 14h.01M16 14h.01"></path>
+              <path d="M8 17h.01M12 17h.01"></path>
+            </svg>
+
+            <span>Add to Calendar</span>
+          </button>
+
+          <!-- <p class="calendar-note">
+      Save your appointment to your preferred calendar.
+    </p> -->
+
+          <button class="success-close-btn" id="bookCallCloseSuccess" type="button">
+            CLOSE
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <div class="socials" aria-label="Social links">
+        <a href="#" aria-label="X">𝕏</a><a href="#" aria-label="Instagram">◎</a><a href="#"
+          aria-label="Facebook">f</a><a href="mailto:hello@example.com" aria-label="Email">✉</a>
+      </div>
+    </div>
+  </section>
+
+
   <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
   <script src="assets/js/script.js"></script>
+  <script src="assets/js/letsconnect.js"></script>
+  <script src="assets/js/bookCall.js"></script>
   <script src="assets/js/menu-toggle.js"></script>
   <script src="assets/js/animation.js"></script>
   <script>
@@ -2121,7 +2284,7 @@
     });
 
 
-  
+
     document.addEventListener('DOMContentLoaded', () => {
 
       const accordionButtons = document.querySelectorAll(

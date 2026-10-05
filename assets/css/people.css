@@ -12,8 +12,8 @@ linear-gradient(0deg, rgba(2, 3, 59, 0.34), rgba(2, 3, 59, 0.34));
 
 }
 body.people-page .header.scrolled {
-   background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1));
+   /* background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1)); */
 
 
 }
@@ -58,7 +58,7 @@ body.people-page .btn-lets-connect {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 60px 40px;
+    padding: 60px 120px;
     box-sizing: border-box;
 }
 
@@ -76,8 +76,8 @@ body.people-page .btn-lets-connect {
     border-radius: 20px;
     margin-bottom: 20px;
     position: absolute;
-    top: 200px;
-    left: 3%;
+    top: 150px;
+    left: 120px;
 }
 
 .people-page h1 {

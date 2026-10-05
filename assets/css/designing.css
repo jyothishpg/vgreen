@@ -10,8 +10,8 @@ linear-gradient(0deg, rgba(0, 49, 109, 0.5), rgba(0, 49, 109, 0.5));
 
 }
 body.designing-page .header.scrolled {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(0, 49, 109, 1), rgba(0, 49, 109, 1));
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(0, 49, 109, 1), rgba(0, 49, 109, 1)); */
 }
 body.designing-page .logo img {
     width: auto; 
@@ -45,6 +45,8 @@ body.designing-page .btn-lets-connect {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    border-bottom-right-radius: 270px;
 }
 
 .designing-page .banner-overlay {
@@ -54,8 +56,10 @@ body.designing-page .btn-lets-connect {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 60px 40px;
+    padding: 60px 120px;
     box-sizing: border-box;
+
+    border-bottom-right-radius: 270px;
 }
 
 .designing-page .banner-content {
@@ -65,15 +69,15 @@ body.designing-page .btn-lets-connect {
 .designing-page .banner-tag {
     display: inline-block;
     background-color: rgba(255, 255, 255, 0.25);
-    color: #fff;
+    color: #000000;
     font-size: 0.9rem;
     font-weight: 500;
     padding: 6px 14px;
     border-radius: 20px;
     margin-bottom: 20px;
     position: absolute;
-    top: 200px;
-    left: 3%;
+    top: 150px;
+    left: 120px;
 }
 
 .designing-page h1 {
@@ -219,4 +223,8 @@ color: #fff;
 .designing-page .process-section .container {
   position: relative;
   z-index: 2;
+}
+
+.designing-page .faq-section {
+    background: transparent;
 }

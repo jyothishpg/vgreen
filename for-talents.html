@@ -62,7 +62,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <a href="#" class="btn-lets-connect">Lets Connect</a>
+        <button class="btn-lets-connect" id="letsConnectBtn"><span>Lets Connect</span></button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -73,8 +73,8 @@
   </header>
   <section class="current-opening">
     <div class="opening-wrappe">
-      <div class="opening-header">
-        <div class="container opening-content">
+      <div class="container-fluid opening-content">
+        <div class="opening-header">
           <h1 class="title-animated" data-aos="fade-up" data-aos-duration="3000"><span>CURRENT OPENING</span></h1>
           <p class="description-animated" data-aos="fade-up" data-aos-duration="3000">
             Step into your next big career move with roles that fit your expertise and ambitions.<br>
@@ -84,7 +84,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="container-fluid">
         <div class="opening-gallery">
           <div class="gallery-item wide">
             <img src="assets/images/talent/talent-1.webp" alt="Team discussion" data-aos="fade-up"
@@ -127,86 +127,102 @@
   </div> -->
     </div>
     <div class="skills-section">
-      <h2>Skills We Are On A Lookout</h2>
+      <div class="container-fluid">
+        <div class="banner-content-padd">
+          <h2>Skills We Are On A Lookout</h2>
+        </div>
+      </div>
 
       <div class="skills-grid">
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="0">
-          <img src="assets/images/talent/1.webp" alt="Oracle">
-        </div>
+          <!-- ROW 1: Scroll Left -->
+          <div class="skills-row">
+            <div class="skills-track scroll-left">
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
-          <img src="assets/images/talent/2.webp" alt="Salesforce">
-        </div>
+              <!-- Original group -->
+              <div class="skills-group">
+                <div class="skill-box"><img src="assets/images/talent/1.webp" alt="Oracle"></div>
+                <div class="skill-box"><img src="assets/images/talent/2.webp" alt="Salesforce"></div>
+                <div class="skill-box"><img src="assets/images/talent/3.webp" alt="Skill 3"></div>
+                <div class="skill-box"><img src="assets/images/talent/4.webp" alt="Skill 4"></div>
+                <div class="skill-box"><img src="assets/images/talent/5.webp" alt="Skill 5"></div>
+                <div class="skill-box"><img src="assets/images/talent/6.webp" alt="Skill 6"></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
-          <img src="assets/images/talent/3.webp" alt="Oracle">
-        </div>
+              <!-- Duplicate group -->
+              <div class="skills-group" aria-hidden="true">
+                <div class="skill-box"><img src="assets/images/talent/1.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/2.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/3.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/4.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/5.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/6.webp" alt=""></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
-          <img src="assets/images/talent/4.webp" alt="Salesforce">
-        </div>
+            </div>
+          </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
-          <img src="assets/images/talent/5.webp" alt="Salesforce">
-        </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="500">
-          <img src="assets/images/talent/6.webp" alt="Salesforce">
-        </div>
+          <!-- ROW 2: Scroll Right -->
+          <div class="skills-row">
+            <div class="skills-track scroll-right">
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="600">
-          <img src="assets/images/talent/7.webp" alt="Salesforce">
-        </div>
+              <!-- Original group -->
+              <div class="skills-group">
+                <div class="skill-box"><img src="assets/images/talent/7.webp" alt="Skill 7"></div>
+                <div class="skill-box"><img src="assets/images/talent/8.webp" alt="Skill 8"></div>
+                <div class="skill-box"><img src="assets/images/talent/9.webp" alt="Skill 9"></div>
+                <div class="skill-box"><img src="assets/images/talent/10.webp" alt="Skill 10"></div>
+                <div class="skill-box"><img src="assets/images/talent/11.webp" alt="Skill 11"></div>
+                <div class="skill-box"><img src="assets/images/talent/12.webp" alt="Skill 12"></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="700">
-          <img src="assets/images/talent/8.webp" alt="Salesforce">
-        </div>
+              <!-- Duplicate group -->
+              <div class="skills-group" aria-hidden="true">
+                <div class="skill-box"><img src="assets/images/talent/7.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/8.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/9.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/10.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/11.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/12.webp" alt=""></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="800">
-          <img src="assets/images/talent/9.webp" alt="Salesforce">
-        </div>
+            </div>
+          </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="900">
-          <img src="assets/images/talent/10.webp" alt="Salesforce">
-        </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1000">
-          <img src="assets/images/talent/11.webp" alt="Salesforce">
-        </div>
+          <!-- ROW 3: Scroll Left -->
+          <div class="skills-row">
+            <div class="skills-track scroll-left">
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1100">
-          <img src="assets/images/talent/12.webp" alt="Salesforce">
-        </div>
+              <!-- Original group -->
+              <div class="skills-group">
+                <div class="skill-box"><img src="assets/images/talent/13.webp" alt="Skill 13"></div>
+                <div class="skill-box"><img src="assets/images/talent/14.webp" alt="Skill 14"></div>
+                <div class="skill-box"><img src="assets/images/talent/15.webp" alt="Skill 15"></div>
+                <div class="skill-box"><img src="assets/images/talent/16.webp" alt="Skill 16"></div>
+                <div class="skill-box"><img src="assets/images/talent/8.webp" alt="Skill 8"></div>
+                <div class="skill-box"><img src="assets/images/talent/9.webp" alt="Skill 9"></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1200">
-          <img src="assets/images/talent/13.webp" alt="Salesforce">
-        </div>
+              <!-- Duplicate group -->
+              <div class="skills-group" aria-hidden="true">
+                <div class="skill-box"><img src="assets/images/talent/13.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/14.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/15.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/16.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/8.webp" alt=""></div>
+                <div class="skill-box"><img src="assets/images/talent/9.webp" alt=""></div>
+              </div>
 
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1300">
-          <img src="assets/images/talent/14.webp" alt="Salesforce">
-        </div>
-
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1400">
-          <img src="assets/images/talent/15.webp" alt="Salesforce">
-        </div>
-
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1500">
-          <img src="assets/images/talent/16.webp" alt="Salesforce">
-        </div>
-
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1600">
-          <img src="assets/images/talent/8.webp" alt="Salesforce">
-        </div>
-
-        <div class="skill-box" data-aos="fade-up" data-aos-duration="900" data-aos-delay="1700">
-          <img src="assets/images/talent/9.webp" alt="Salesforce">
-        </div>
+            </div>
+          </div>
 
       </div>
     </div>
   </section>
-  <div class="container">
+  <section class="form-wrapper-jobs">
+ <div class="container">
     <section class="job-listings">
 
 
@@ -219,7 +235,7 @@
 
 
           <section class="job-table-section">
-            <iframe src="https://vgreentek.oorwin.ai/#/careers/index.html" width="100%" height="600" frameborder="0"
+            <iframe src="https://vgreentek.oorwin.ai/#/careers/index.html" width="100%" height="1200" frameborder="0"
               style="border:none; margin:0px; margin-top:0px;"></iframe>
 
             <!-- <div class="table-responsive">
@@ -353,6 +369,8 @@
 
     </section>
   </div>
+  </section>
+ 
 
 
 

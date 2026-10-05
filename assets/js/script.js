@@ -13,7 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const prevBtn = hero.querySelector("#prevBtn");
     const nextBtn = hero.querySelector("#nextBtn");
 
+    const progressContainer =
+        hero.querySelector("#heroProgress");
+
     if (!slides.length) return;
+
+
+    /* ==========================================
+       SETTINGS
+    ========================================== */
 
     let currentIndex = 0;
     let slideTimer = null;
@@ -21,13 +29,85 @@ document.addEventListener("DOMContentLoaded", () => {
     const slideDuration = 12000;
 
 
-    // --------------------------------
-    // PLAY VIDEO
-    // --------------------------------
+    /* ==========================================
+       CREATE PROGRESS SEGMENTS
+    ========================================== */
+
+    const progressFills = [];
+
+    if (progressContainer) {
+
+        progressContainer.innerHTML = "";
+
+        slides.forEach(() => {
+
+            const progressItem =
+                document.createElement("div");
+
+            progressItem.className =
+                "hero-progress-item";
+
+            const progressFill =
+                document.createElement("div");
+
+            progressFill.className =
+                "hero-progress-fill";
+
+            progressItem.appendChild(progressFill);
+            progressContainer.appendChild(progressItem);
+
+            progressFills.push(progressFill);
+
+        });
+
+    }
+
+
+    /* ==========================================
+       UPDATE PROGRESS BAR
+    ========================================== */
+
+    function updateProgress(index, percentage) {
+
+        progressFills.forEach((fill, i) => {
+
+            if (i === index) {
+
+                fill.style.width =
+                    `${Math.min(100, Math.max(0, percentage))}%`;
+
+            } else {
+
+                fill.style.width = "0%";
+
+            }
+
+        });
+
+    }
+
+
+    /* ==========================================
+       RESET PROGRESS
+    ========================================== */
+
+    function resetProgress() {
+
+        progressFills.forEach(fill => {
+            fill.style.width = "0%";
+        });
+
+    }
+
+
+    /* ==========================================
+       PLAY VIDEO
+    ========================================== */
 
     function playVideo(slide) {
 
-        const video = slide.querySelector(".hero-video");
+        const video =
+            slide.querySelector(".hero-video");
 
         if (!video) return;
 
@@ -40,57 +120,105 @@ document.addEventListener("DOMContentLoaded", () => {
 
             playPromise
                 .then(() => {
-                    console.log("Playing:", video.currentSrc);
+                    console.log(
+                        "Playing:",
+                        video.currentSrc
+                    );
                 })
                 .catch(error => {
-                    console.log("Autoplay prevented:", error);
+                    console.log(
+                        "Autoplay prevented:",
+                        error
+                    );
                 });
 
         }
+
     }
 
 
-    // --------------------------------
-    // STOP VIDEO
-    // --------------------------------
+    /* ==========================================
+       STOP VIDEO
+    ========================================== */
 
     function stopVideo(slide) {
 
-        const video = slide.querySelector(".hero-video");
+        const video =
+            slide.querySelector(".hero-video");
 
         if (!video) return;
 
         video.pause();
 
-        // Don't reset currentTime.
-        // iPhone Safari can take extra time when
-        // the video has to seek back to 0.
     }
 
 
-    // --------------------------------
-    // LOAD VIDEO
-    // --------------------------------
+    /* ==========================================
+       LOAD VIDEO
+    ========================================== */
 
     function loadVideo(slide) {
 
-        const video = slide.querySelector(".hero-video");
+        const video =
+            slide.querySelector(".hero-video");
 
         if (!video) return;
 
-        /*
-         * If video was initially preload="none",
-         * calling load() starts loading it.
-         */
         if (video.readyState === 0) {
             video.load();
         }
+
     }
 
 
-    // --------------------------------
-    // GO TO SLIDE
-    // --------------------------------
+    /* ==========================================
+       VIDEO PROGRESS LISTENERS
+       Attach only once per video
+    ========================================== */
+
+    slides.forEach((slide, index) => {
+
+        const video =
+            slide.querySelector(".hero-video");
+
+        if (!video) return;
+
+
+        // Update progress as the video plays
+        video.addEventListener("timeupdate", () => {
+
+            if (index !== currentIndex) return;
+
+            if (
+                Number.isFinite(video.duration) &&
+                video.duration > 0
+            ) {
+
+                const percentage =
+                    (video.currentTime / video.duration) * 100;
+
+                updateProgress(index, percentage);
+
+            }
+
+        });
+
+
+        // Ensure progress reaches 100% when video ends
+        video.addEventListener("ended", () => {
+
+            if (index === currentIndex) {
+                updateProgress(index, 100);
+            }
+
+        });
+
+    });
+
+
+    /* ==========================================
+       GO TO SLIDE
+    ========================================== */
 
     function goToSlide(index) {
 
@@ -100,29 +228,52 @@ document.addEventListener("DOMContentLoaded", () => {
             (index + slides.length) % slides.length;
 
 
+        // Reset progress for the new slide
+        resetProgress();
+
+
         slides.forEach((slide, i) => {
+
+            const video =
+                slide.querySelector(".hero-video");
+
 
             if (i === currentIndex) {
 
                 slide.classList.add("active");
 
-                // Load only current video
-                loadVideo(slide);
+                if (video) {
 
-                // Start playback
-                playVideo(slide);
+                    loadVideo(slide);
+
+                    // Reset video to the beginning
+                    try {
+                        video.currentTime = 0;
+                    } catch (error) {
+                        console.warn(
+                            "Could not reset video:",
+                            error
+                        );
+                    }
+
+                    playVideo(slide);
+
+                }
 
             } else {
 
                 slide.classList.remove("active");
 
                 stopVideo(slide);
+
             }
 
         });
 
 
-        // Update dots
+        /* ----------------------------------
+           UPDATE DOTS
+        ---------------------------------- */
 
         dots.forEach((dot, i) => {
 
@@ -134,7 +285,9 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
 
-        // Next slide
+        /* ----------------------------------
+           NEXT SLIDE TIMER
+        ---------------------------------- */
 
         slideTimer = setTimeout(() => {
 
@@ -145,9 +298,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // --------------------------------
-    // NEXT
-    // --------------------------------
+    /* ==========================================
+       NEXT BUTTON
+    ========================================== */
 
     if (nextBtn) {
 
@@ -160,9 +313,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // --------------------------------
-    // PREVIOUS
-    // --------------------------------
+    /* ==========================================
+       PREVIOUS BUTTON
+    ========================================== */
 
     if (prevBtn) {
 
@@ -175,9 +328,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // --------------------------------
-    // DOTS
-    // --------------------------------
+    /* ==========================================
+       DOT NAVIGATION
+    ========================================== */
 
     dots.forEach(dot => {
 
@@ -188,16 +341,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 10
             );
 
-            goToSlide(index);
+            if (
+                !Number.isNaN(index) &&
+                index >= 0 &&
+                index < slides.length
+            ) {
+
+                goToSlide(index);
+
+            }
 
         });
 
     });
 
 
-    // --------------------------------
-    // START
-    // --------------------------------
+    /* ==========================================
+       START SLIDER
+    ========================================== */
 
     goToSlide(0);
 
@@ -211,15 +372,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const logoTrack =
         sliderWrapper?.querySelector('.logo-track');
 
-    const logoRows =
-        logoTrack?.querySelectorAll('.logo-row');
-
-
-    if (
-        !sliderWrapper ||
-        !logoTrack ||
-        !logoRows?.length
-    ) {
+    if (!sliderWrapper || !logoTrack) {
         return;
     }
 
@@ -228,9 +381,9 @@ document.addEventListener('DOMContentLoaded', () => {
        SETTINGS
     ========================================== */
 
-    const ACTIVE_ROWS = 3;
+    const ACTIVE_ROWS = 5;
 
-    // Increase for faster scrolling
+    // Pixels per second
     const SCROLL_SPEED = 30;
 
 
@@ -239,128 +392,223 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isPaused = false;
 
-    let firstSetHeight = 0;
+
+    /* ==========================================
+       GET ROWS
+    ========================================== */
+
+    function getRows() {
+        return Array.from(
+            logoTrack.querySelectorAll('.logo-row')
+        );
+    }
 
 
     /* ==========================================
-       GET FIRST SET HEIGHT
+       GET ROW HEIGHT / STEP
     ========================================== */
 
-    function calculateHeight() {
+    function getRowStep() {
 
-        const rows =
-            Array.from(logoRows);
+        const rows = getRows();
+
+        if (rows.length < 2) {
+            return rows[0]?.offsetHeight || 0;
+        }
 
         /*
-         * Since we duplicated the rows,
-         * first half = original content
+         * Distance between first and second row.
+         *
+         * This also handles gap/margin between rows.
          */
+        const firstRect =
+            rows[0].getBoundingClientRect();
 
-        const half =
-            Math.floor(rows.length / 2);
+        const secondRect =
+            rows[1].getBoundingClientRect();
+
+        return secondRect.top - firstRect.top;
+    }
 
 
-        firstSetHeight =
-            rows
-                .slice(0, half)
-                .reduce(
-                    (total, row) =>
-                        total + row.offsetHeight,
-                    0
-                );
+    /* ==========================================
+       MOVE FIRST ROW TO END
+    ========================================== */
 
+    function moveFirstRowToEnd() {
+
+        const rows = getRows();
+
+        if (rows.length < 2) {
+            return;
+        }
+
+        /*
+         * Get the actual distance occupied by
+         * the first row before moving it.
+         */
+        const step =
+            getRowStep();
+
+        if (!step) {
+            return;
+        }
+
+
+        /*
+         * Move first row to the END.
+         */
+        const firstRow = rows[0];
+
+        logoTrack.appendChild(firstRow);
+
+
+        /*
+         * Keep the animation visually continuous.
+         *
+         * Example:
+         *
+         * position = 120px
+         * step     = 100px
+         *
+         * New position = 20px
+         */
+        position -= step;
+
+
+        /*
+         * Prevent negative values.
+         */
+        if (position < 0) {
+            position = 0;
+        }
+
+
+        logoTrack.style.transform =
+            `translate3d(0, -${position}px, 0)`;
     }
 
 
     /* ==========================================
        ACTIVE LOGOS
     ========================================== */
+/* ==========================================
+   ACTIVE LOGOS
+========================================== */
 
-    function updateHighlight() {
+function updateHighlight() {
 
-        const wrapperRect =
-            sliderWrapper.getBoundingClientRect();
+    const rows = getRows();
 
-        const centerY =
-            wrapperRect.top +
-            wrapperRect.height / 2;
+    if (!rows.length) {
+        return;
+    }
 
+    const wrapperRect =
+        sliderWrapper.getBoundingClientRect();
 
-        const rows =
-            Array.from(logoRows);
-
-
-        const distances =
-            rows.map(row => {
-
-                const rect =
-                    row.getBoundingClientRect();
-
-                const rowCenter =
-                    rect.top +
-                    rect.height / 2;
-
-                return {
-                    row,
-                    distance:
-                        Math.abs(
-                            centerY -
-                            rowCenter
-                        )
-                };
-
-            });
+    const centerY =
+        wrapperRect.top +
+        wrapperRect.height / 2;
 
 
-        distances.sort(
-            (a, b) =>
-                a.distance -
-                b.distance
-        );
+    // Get each row's position
+    const rowPositions = rows.map(row => {
+
+        const rect = row.getBoundingClientRect();
+
+        const rowCenter =
+            rect.top + rect.height / 2;
+
+        return {
+            row,
+            centerY: rowCenter,
+            distance: Math.abs(centerY - rowCenter)
+        };
+
+    });
 
 
-        /* Remove active */
+    // Sort by distance from the center
+    const nearestRows = [...rowPositions].sort(
+        (a, b) => a.distance - b.distance
+    );
 
-        rows.forEach(row => {
 
-            row
-                .querySelectorAll('.logo-item')
-                .forEach(item => {
+    // Current 3 active rows
+    const activeRows = nearestRows
+        .slice(0, ACTIVE_ROWS)
+        .map(item => item.row);
 
-                    item.classList.remove(
-                        'active'
-                    );
 
-                });
+    // Sort rows from top to bottom
+    const visualRows = [...rowPositions].sort(
+        (a, b) => a.centerY - b.centerY
+    );
 
+
+    // Find the position of the active rows
+    const activeIndexes = activeRows.map(row =>
+        visualRows.findIndex(item => item.row === row)
+    );
+
+    const firstActiveIndex =
+        Math.min(...activeIndexes);
+
+    const lastActiveIndex =
+        Math.max(...activeIndexes);
+
+
+    // 3 adjacent rows above and 3 below
+    const secondaryRows = [
+        ...visualRows.slice(
+            Math.max(0, firstActiveIndex - 3),
+            firstActiveIndex
+        ),
+        ...visualRows.slice(
+            lastActiveIndex + 1,
+            lastActiveIndex + 2
+        )
+    ].map(item => item.row);
+
+
+    // Remove both states from all logos
+    rows.forEach(row => {
+
+        row.querySelectorAll('.logo-item').forEach(logo => {
+            logo.classList.remove(
+                'active',
+                'active-state-2'
+            );
         });
 
+    });
 
-        /* Activate nearest 3 rows */
 
-        distances
-            .slice(0, ACTIVE_ROWS)
-            .forEach(item => {
+    // Apply the primary active state
+    activeRows.forEach(row => {
 
-                item.row
-                    .querySelectorAll(
-                        '.logo-item'
-                    )
-                    .forEach(logo => {
+        row.querySelectorAll('.logo-item').forEach(logo => {
+            logo.classList.add('active');
+        });
 
-                        logo.classList.add(
-                            'active'
-                        );
+    });
 
-                    });
 
-            });
+    // Apply the secondary active state
+    secondaryRows.forEach(row => {
 
-    }
+        row.querySelectorAll('.logo-item').forEach(logo => {
+            logo.classList.add('active-state-2');
+        });
+
+    });
+
+}
 
 
     /* ==========================================
-       AUTO MARQUEE
+       ANIMATION
     ========================================== */
 
     function animate(timestamp) {
@@ -374,33 +622,35 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isPaused) {
 
             /*
-             * Move upward continuously
+             * Move upward.
              */
-
             position +=
-                (SCROLL_SPEED * delta) /
-                1000;
+                (SCROLL_SPEED * delta) / 1000;
 
 
             /*
-             * When first set has completely
-             * moved away, start from same
-             * position in duplicate set.
+             * Check whether the first row
+             * has completely left the viewport.
+             *
+             * Use while instead of if so it
+             * remains safe if animation jumps.
              */
+            let step = getRowStep();
 
-            if (
-                position >=
-                firstSetHeight
+            while (
+                step > 0 &&
+                position >= step
             ) {
 
-                position -=
-                    firstSetHeight;
+                moveFirstRowToEnd();
+
+                step = getRowStep();
 
             }
 
 
             logoTrack.style.transform =
-                `translateY(-${position}px)`;
+                `translate3d(0, -${position}px, 0)`;
 
         }
 
@@ -408,9 +658,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateHighlight();
 
 
-        requestAnimationFrame(
-            animate
-        );
+        requestAnimationFrame(animate);
 
     }
 
@@ -443,23 +691,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     /* ==========================================
-       INITIALIZE
+       RESIZE
     ========================================== */
-
-    calculateHeight();
-
-    updateHighlight();
-
 
     window.addEventListener(
         'resize',
-        calculateHeight
+        () => {
+
+            /*
+             * Recalculate naturally on next frame.
+             */
+            lastTime =
+                performance.now();
+
+        }
     );
 
 
-    requestAnimationFrame(
-        animate
-    );
+    /* ==========================================
+       INITIALIZE
+    ========================================== */
+
+    updateHighlight();
+
+    requestAnimationFrame(animate);
 
 });
 // ////////////////////////////////////////////
@@ -697,28 +952,6 @@ observer.observe(statsSection);
 //   }
 // });
 
-const letsConnectBtn = document.getElementById('letsConnectBtn');
-const contactForm = document.getElementById('contactForm');
-const closeForm = document.getElementById('closeForm');
-const overlay = document.getElementById('overlay');
-
-function openForm() {
-  contactForm.classList.add('active');
-  overlay.classList.add('active');
-}
-
-function closeFormPanel() {
-  contactForm.classList.remove('active');
-  overlay.classList.remove('active');
-}
-
-letsConnectBtn.addEventListener('click', openForm);
-closeForm.addEventListener('click', closeFormPanel);
-overlay.addEventListener('click', closeFormPanel);
-
-
-
-
 // HERO VIDEO LOADER
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -926,74 +1159,6 @@ window.addEventListener('scroll', function () {
 });
 
 
-// send us message
-const form = document.getElementById("contactFormSendus");
-
-form.addEventListener("submit", async function (e) {
-
-  e.preventDefault();
-
-  const button = form.querySelector(".send-btn");
-
-  button.disabled = true;
-  button.textContent = "SENDING...";
-
-  const formData = {
-    fullName: form.fullName.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    company: form.company.value,
-    service: form.service.value,
-    challenge: form.challenge.value
-  };
-
-  try {
-
-    await fetch(
-      "https://script.google.com/macros/s/AKfycbxyGkW-dyqBVuchFl_Cn4XDqIlDUxryT9AbfA9VRQ5021gemIHasZVCmwZv6NzzyrIH/exec",
-      {
-        method: "POST",
-        mode: "no-cors",
-        body: JSON.stringify(formData)
-      }
-    );
-
-    form.reset();
-
-    button.textContent = "MESSAGE SENT";
-
-    setTimeout(() => {
-      button.textContent = "SEND MESSAGE";
-      button.disabled = false;
-    }, 3000);
-
-  } catch (error) {
-
-    console.error(error);
-
-    button.textContent = "TRY AGAIN";
-    button.disabled = false;
-  }
-
-});
-
-
-// thanksou send us
-const thankYouMessage = document.getElementById("thankYouMessage");
-
-form.addEventListener("submit", function () {
-
-  const button = form.querySelector(".send-btn");
-
-  button.disabled = true;
-  button.textContent = "SENDING...";
-
-  // After successful Google Sheet submission:
-  form.style.display = "none";
-  document.querySelector(".form-header").style.display = "none";
-  thankYouMessage.style.display = "block";
-
-});
 
  document.addEventListener('DOMContentLoaded', () => {
 

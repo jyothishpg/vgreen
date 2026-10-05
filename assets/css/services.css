@@ -1,5 +1,5 @@
 body.services-page {
-    background: linear-gradient(180deg, #fff, #8049FF);
+    /* background: linear-gradient(180deg, #fff, #8049FF); */
 }
 
 body.services-page .header {
@@ -9,7 +9,7 @@ body.services-page .header {
 
 body.services-page .logo img {
     width: auto;
-    height: 55px;
+    /* height: 55px; */
 }
 
 body.services-page .nav-container {
@@ -22,7 +22,7 @@ body.services-page .btn-lets-connect {
 }
 
 body.services-page .header.scrolled {
-    background: rgba(10, 93, 121, 1);
+    /* background: rgba(10, 93, 121, 1); */
 }
 
 
@@ -454,9 +454,9 @@ margin-bottom: 32px;
 .content-slider {
     width: 100%;
     overflow: hidden;
-    background: rgba(255, 255, 255, 0.55);
+    /* background: rgba(255, 255, 255, 0.55); */
     padding: 70px 0px;
-    box-shadow: 0px 4px 4px 0px #00000040;
+    /* box-shadow: 0px 4px 4px 0px #00000040; */
 
 }
 
@@ -519,8 +519,16 @@ margin-bottom: 32px;
 .engagement-section {
   padding: 30px 40px;
   text-align: center;
-  background: linear-gradient(80.74deg, #8EBFCE 37.97%, #F1F1F1 80.36%);
-
+  /* background: linear-gradient(80.74deg, #8EBFCE 37.97%, #F1F1F1 80.36%); */
+/* background: linear-gradient(135deg, #8EBFCE 0%, #F1F1F1 100%); */
+background: linear-gradient(
+  90deg,
+  #8EBFCE 0%,
+  #B8D5DD 25%,
+  #DDE7EA 50%,
+  #F1F1F1 75%,
+  #F1F1F1 100%
+);
 }
 
 .engagement-section h1 {
@@ -644,8 +652,15 @@ text-transform: uppercase;
   justify-content: center;
   text-align: center;
   padding: 100px 0px;
-  background: linear-gradient(80.74deg, #F1F1F1 37.97%, #8EBFCE 96.36%);
-
+  /* background: linear-gradient(80.74deg, #F1F1F1 37.97%, #8EBFCE 96.36%); */
+background: linear-gradient(
+  90deg,
+  #F1F1F1 0%,
+  #F1F1F1 15%,
+  #E3ECEF 40%,
+  #C5DDE3 65%,
+  #8EBFCE 100%
+);
 }
 
 .begin-section.content {
@@ -744,4 +759,16 @@ padding: 10px 50px;
 }
 .articles-section.recent-article-services {
     background: #fff;
+}
+.services-technologies {
+    padding: 160px 0px;
+    background: url('../images/services-tech-bg.webp') center/cover no-repeat;
+}
+.services-technologies .section-label {
+    color: #02033B;
+}
+.services-technologies .bottom-title {
+    color: #02033B;
+    font-size: 100px;
+    margin-bottom: 50px;
 }

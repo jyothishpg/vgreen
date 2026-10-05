@@ -18,14 +18,14 @@ background: #fff;
 
 
 body.blog-page .header.scrolled {
-   background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1));
+   /* background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(2, 3, 59, 1), rgba(2, 3, 59, 1)); */
 
 
 }
 body.blog-page .logo img {
     width: auto;
-    height: 55px;
+    /* height: 55px; */
 }
 
 body.blog-page .nav-container {
@@ -91,7 +91,7 @@ letter-spacing: 0%;
 /* Hover lift + glow */
 .case-studies .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 69, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 69, 255, 0);
 }
 
 /* Image animation */

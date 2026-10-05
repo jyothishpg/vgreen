@@ -12,8 +12,8 @@ linear-gradient(0deg, rgba(5, 49, 86, 0.5), rgba(5, 49, 86, 0.5));
 
 }
 body.software-page .header.scrolled {
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
-linear-gradient(0deg, rgba(5, 49, 86, 1), rgba(5, 49, 86, 1));
+    /* background: linear-gradient(0deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)),
+linear-gradient(0deg, rgba(5, 49, 86, 1), rgba(5, 49, 86, 1)); */
 
 }
 body.software-page .logo img {
@@ -57,7 +57,7 @@ body.software-page .btn-lets-connect {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: 60px 40px;
+    padding: 60px 120px;
     box-sizing: border-box;
 }
 
@@ -75,8 +75,8 @@ body.software-page .btn-lets-connect {
     border-radius: 20px;
     margin-bottom: 20px;
     position: absolute;
-    top: 200px;
-    left: 3%;
+    top: 150px;
+    left: 120px;
 }
 
 .software-page h1 {
@@ -153,7 +153,15 @@ background-image: url("../images/software-process.webp") ;
     color: #fff;
 }
 .software-page .why-offer-section .offer-right {
-border-left-color: #5FA4E6;
+border-left: 2px solid transparent;
+  border-image: linear-gradient(
+    to bottom,
+    #5FA4E6,
+    #3b6cff 20%,
+    #3b6cff 80%,
+    rgba(59, 108, 255, 0)
+  ) 1;
+    padding-left: 32px;
 }
 .software-page .why-offer-section .offer-item {
     border-bottom-color: #5FA4E6;
@@ -215,4 +223,9 @@ vertical-align: middle;
 color:#02033B;
 margin-top: 32px;
 display: block;
+}
+
+
+.software-page .faq-section {
+    background: transparent;
 }

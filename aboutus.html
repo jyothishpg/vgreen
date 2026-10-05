@@ -62,7 +62,7 @@
 
       <!-- Action Button & Mobile Toggle -->
       <div class="nav-right">
-        <button class="btn-lets-connect" id="letsConnectBtn">Lets Connect</button>
+        <button class="btn-lets-connect" id="letsConnectBtn"><span></span>Lets Connect</span></button>
         <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
           <span></span>
           <span></span>
@@ -899,12 +899,123 @@
     </div>
   </footer>
 
+    <div id="contactForm" class="contact-form">
+
+    <!-- <span id="closeForm" class="close-btn">×</span> -->
+
+    <div class="form-header">
+      <h2>Send us a message</h2>
+      <p>
+        We typically respond within 24 hours. Tell us about your needs
+        and we'll get back to you with next steps.
+      </p>
+    </div>
+
+    <form id="contactFormSendus" novalidate>
+
+  <!-- Full Name -->
+  <div class="form-group">
+    <label for="fullName">FULL NAME*</label>
+    <input type="text" id="fullName" name="fullName" required>
+    <span class="error-message">
+      Full name is required to address you properly.
+    </span>
+  </div>
+
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">EMAIL ADDRESS*</label>
+    <input type="email" id="email" name="email" required>
+    <span class="error-message">
+      Please enter a valid email address.
+    </span>
+  </div>
+
+  <!-- Phone -->
+  <div class="form-group">
+    <label for="phone">PHONE NUMBER</label>
+    <input type="tel" id="phone" name="phone">
+    <span class="error-message">
+      Please enter a valid phone number.
+    </span>
+  </div>
+
+  <!-- Company -->
+  <div class="form-group">
+    <label for="company">COMPANY NAME*</label>
+    <input type="text" id="company" name="company" required>
+    <span class="error-message">
+      Company name is required.
+    </span>
+  </div>
+
+  <!-- Service -->
+  <div class="form-group">
+    <label for="service">WHICH SERVICE INTERESTS YOU? *</label>
+    <input type="text" id="service" name="service" required>
+    <span class="error-message">
+      Please let us know which service interests you.
+    </span>
+  </div>
+
+  <!-- Challenge -->
+  <div class="form-group">
+    <label for="challenge">TELL US ABOUT YOUR CHALLENGE *</label>
+    <textarea id="challenge" name="challenge" required></textarea>
+    <span class="error-message">
+      Please tell us about your challenge.
+    </span>
+  </div>
+
+  <!-- Submit -->
+  <button type="submit" class="send-btn" id="submitBtn">
+    SEND MESSAGE
+  </button>
+
+</form>
+
+    <!-- THANK YOU MESSAGE -->
+
+    <div id="thankYouMessage" class="thank-you-message">
+
+
+      <div class="thank-you-icon">
+        ✓
+      </div>
+
+      <h2>Thank you!</h2>
+
+      <p>
+        <span>Your message has been sent.</span>
+        We've received your inquiry and our team is already reviewing your challenge. Expect a response in your inbox shortly.
+      </p>
+
+      <button type="button" id="thankYouClose" class="send-btn">
+        SEND ANOTHER MESSAGE
+      </button>
+
+
+    </div>
+
+    <div class="social-icons">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-solid fa-envelope"></i></a>
+    </div>
+
+  </div>
+
 
   <script src="assets/vendor/jquery/jquery-3.7.1.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="assets/js/menu-toggle.js"></script>
+    
+
+   
   <script src="assets/js/about.js"></script>
+  <script src="assets/js/letsconnect.js"></script>
+  <script src="assets/js/menu-toggle.js"></script>
 <script>
     AOS.init({
     duration: 800,
